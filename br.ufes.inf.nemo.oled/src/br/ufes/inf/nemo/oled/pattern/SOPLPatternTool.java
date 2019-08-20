@@ -52,12 +52,13 @@ public class SOPLPatternTool {
 		switch (elem) {	
 		
 		case SOFFERING:
-			System.out.println("SOFFERING");
 			pm = new EntryPoint(ProjectBrowser.frame.getProjectBrowser().getParser(), x, y, 1);
 			break;
 		case SAGREEMENT:
-			System.out.println("SAGREEMENT");
 			pm = new EntryPoint(ProjectBrowser.frame.getProjectBrowser().getParser(), x, y, 2);
+			break;
+		case TUTORIAL:
+			pm = new EntryPoint(ProjectBrowser.frame.getProjectBrowser().getParser(), x, y, 1);
 			break;
 		default:
 			break;

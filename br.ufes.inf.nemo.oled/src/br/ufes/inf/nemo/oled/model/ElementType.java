@@ -45,6 +45,6 @@ public enum ElementType {
   DOMAIN_PATTERN,
   
   // SOPL Pattern
-  SOFFERING, SAGREEMENT
+  SOFFERING, SAGREEMENT, TUTORIAL
   
 }

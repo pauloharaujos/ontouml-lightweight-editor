@@ -395,6 +395,7 @@ public class PaletteAccordion extends JPanel{
 		
 		soplPalette.createElement("staticpalette.sopl", "soffering");	
 		soplPalette.createElement("staticpalette.sopl", "sagreement");	
+		soplPalette.createElement("staticpalette.sopl", "tutorial");	
 		
 		soplPalette.addCommandListener(editorDispatcher);
 		
