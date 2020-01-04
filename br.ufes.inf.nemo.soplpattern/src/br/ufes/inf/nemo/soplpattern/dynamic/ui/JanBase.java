@@ -1887,7 +1887,7 @@ public class JanBase {
 		JPanel panelImg = new JPanel();
 		panelImg.setBackground(Color.LIGHT_GRAY);
 		panelImg.setBounds(10, 27, 581, 275);
-		iconSOffering = new  ImageIcon(getClass().getResource("/resource/SOffering.PNG"));
+		iconSOffering = new  ImageIcon(getClass().getResource("/resource/SOffering.png"));
 		imagemSOffering = new JLabel(iconSOffering);
 		imagemSOffering.setBounds(10, 27, 581, 275);
 		imagemSOffering.setSize(70, 96); // 70 96
@@ -2784,7 +2784,7 @@ public class JanBase {
 		JPanel SAgreement_panelImg = new JPanel();
 		SAgreement_panelImg.setBackground(Color.LIGHT_GRAY);
 		SAgreement_panelImg.setBounds(10, 27, 581, 275);
-		iconSAgreement = new  ImageIcon(getClass().getResource("/resource/SAgreement.PNG"));
+		iconSAgreement = new  ImageIcon(getClass().getResource("/resource/SAgreement.png"));
 		imagemSAgreement = new JLabel(iconSAgreement);
 		imagemSAgreement.setBounds(10, 27, 581, 275);
 		imagemSAgreement.setSize(70, 96); // 70 96
@@ -2826,7 +2826,7 @@ public class JanBase {
 		JPanel SADescription_panelImg = new JPanel();
 		SADescription_panelImg.setBackground(Color.LIGHT_GRAY);
 		SADescription_panelImg.setBounds(10, 27, 581, 275);
-		iconSADescription = new  ImageIcon(getClass().getResource("/resource/SADescription.PNG"));
+		iconSADescription = new  ImageIcon(getClass().getResource("/resource/SADescription.png"));
 		imagemSADescription = new JLabel(iconSADescription);
 		imagemSADescription.setBounds(10, 27, 581, 275);
 		imagemSADescription.setSize(70, 96); // 70 96
@@ -2868,7 +2868,7 @@ public class JanBase {
 		JPanel SCCommitments_panelImg = new JPanel();
 		SCCommitments_panelImg.setBackground(Color.LIGHT_GRAY);
 		SCCommitments_panelImg.setBounds(10, 27, 581, 275);
-		iconSCCommitments = new  ImageIcon(getClass().getResource("/resource/SCCommitments.PNG"));
+		iconSCCommitments = new  ImageIcon(getClass().getResource("/resource/SCCommitments.png"));
 		imagemSCCommitments = new JLabel(iconSCCommitments);
 		imagemSCCommitments.setBounds(10, 27, 581, 275);
 		imagemSCCommitments.setSize(70, 96); // 70 96
@@ -2910,7 +2910,7 @@ public class JanBase {
 		JPanel HPCommitments_panelImg = new JPanel();
 		HPCommitments_panelImg.setBackground(Color.LIGHT_GRAY);
 		HPCommitments_panelImg.setBounds(10, 27, 581, 275);
-		iconHPCommitments = new  ImageIcon(getClass().getResource("/resource/HPCommitments.PNG"));
+		iconHPCommitments = new  ImageIcon(getClass().getResource("/resource/HPCommitments.png"));
 		imagemHPCommitments = new JLabel(iconHPCommitments);
 		imagemHPCommitments.setBounds(10, 27, 581, 275);
 		imagemHPCommitments.setSize(70, 96); // 70 96
@@ -2952,7 +2952,7 @@ public class JanBase {
 		JPanel SDelivery_panelImg = new JPanel();
 		SDelivery_panelImg.setBackground(Color.LIGHT_GRAY);
 		SDelivery_panelImg.setBounds(10, 27, 581, 275);
-		iconSDelivery = new  ImageIcon(getClass().getResource("/resource/SDelivery.PNG"));
+		iconSDelivery = new  ImageIcon(getClass().getResource("/resource/SDelivery.png"));
 		imagemSDelivery = new JLabel(iconSDelivery);
 		imagemSDelivery.setBounds(10, 27, 581, 275);
 		imagemSDelivery.setSize(70, 96); // 70 96
@@ -2994,7 +2994,7 @@ public class JanBase {
 		JPanel HPActions_panelImg = new JPanel();
 		HPActions_panelImg.setBackground(Color.LIGHT_GRAY);
 		HPActions_panelImg.setBounds(10, 27, 581, 275);
-		iconHPActions = new  ImageIcon(getClass().getResource("/resource/HPActions.PNG"));
+		iconHPActions = new  ImageIcon(getClass().getResource("/resource/HPActions.png"));
 		imagemHPActions = new JLabel(iconHPActions);
 		imagemHPActions.setBounds(10, 27, 581, 275);
 		imagemHPActions.setSize(70, 96); // 70 96
@@ -3037,7 +3037,7 @@ public class JanBase {
 		JPanel HPActionMotivation_panelImg = new JPanel();
 		HPActionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		HPActionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconHPActionMotivation = new  ImageIcon(getClass().getResource("/resource/HPActionMotivation.PNG"));
+		iconHPActionMotivation = new  ImageIcon(getClass().getResource("/resource/HPActionMotivation.png"));
 		imagemHPActionMotivation = new JLabel(iconHPActionMotivation);
 		imagemHPActionMotivation.setBounds(10, 27, 581, 275);
 		imagemHPActionMotivation.setSize(70, 96); // 70 96
@@ -3079,7 +3079,7 @@ public class JanBase {
 		JPanel SCActions_panelImg = new JPanel();
 		SCActions_panelImg.setBackground(Color.LIGHT_GRAY);
 		SCActions_panelImg.setBounds(10, 27, 581, 275);
-		iconSCActions = new  ImageIcon(getClass().getResource("/resource/SCActions.PNG"));
+		iconSCActions = new  ImageIcon(getClass().getResource("/resource/SCActions.png"));
 		imagemSCActions = new JLabel(iconSCActions);
 		imagemSCActions.setBounds(10, 27, 581, 275);
 		imagemSCActions.setSize(70, 96); // 70 96
@@ -3121,7 +3121,7 @@ public class JanBase {
 		JPanel SCActionMotivation_panelImg = new JPanel();
 		SCActionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		SCActionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconSCActionMotivation = new  ImageIcon(getClass().getResource("/resource/SCActionMotivation.PNG"));
+		iconSCActionMotivation = new  ImageIcon(getClass().getResource("/resource/SCActionMotivation.png"));
 		imagemSCActionMotivation = new JLabel(iconSCActionMotivation);
 		imagemSCActionMotivation.setBounds(10, 27, 581, 275);
 		imagemSCActionMotivation.setSize(70, 96); // 70 96
@@ -3164,7 +3164,7 @@ public class JanBase {
 		JPanel Interactions_panelImg = new JPanel();
 		Interactions_panelImg.setBackground(Color.LIGHT_GRAY);
 		Interactions_panelImg.setBounds(10, 27, 581, 275);
-		iconInteractions = new  ImageIcon(getClass().getResource("/resource/Interactions.PNG"));
+		iconInteractions = new  ImageIcon(getClass().getResource("/resource/Interactions.png"));
 		imagemInteractions = new JLabel(iconInteractions);
 		imagemInteractions.setBounds(10, 27, 581, 275);
 		imagemInteractions.setSize(70, 96); // 70 96
@@ -3206,7 +3206,7 @@ public class JanBase {
 		JPanel InteractionMotivation_panelImg = new JPanel();
 		InteractionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		InteractionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconInteractionMotivation = new  ImageIcon(getClass().getResource("/resource/InteractionMotivation.PNG"));
+		iconInteractionMotivation = new  ImageIcon(getClass().getResource("/resource/InteractionMotivation.png"));
 		imagemInteractionMotivation = new JLabel(iconInteractionMotivation);
 		imagemInteractionMotivation.setBounds(10, 27, 581, 275);
 		imagemInteractionMotivation.setSize(70, 96); // 70 96
@@ -3248,7 +3248,7 @@ public class JanBase {
 		JPanel panelImg_SODescription = new JPanel();
 		panelImg_SODescription.setBackground(Color.LIGHT_GRAY);
 		panelImg_SODescription.setBounds(10, 27, 581, 275);
-		iconSODescription = new  ImageIcon(getClass().getResource("/resource/SODescription.PNG"));
+		iconSODescription = new  ImageIcon(getClass().getResource("/resource/SODescription.png"));
 		imagemSODescription = new JLabel(iconSODescription);
 		imagemSODescription.setBounds(10, 27, 581, 275);
 		imagemSODescription.setSize(70, 96); // 70 96
@@ -3291,7 +3291,7 @@ public class JanBase {
 		JPanel panelImg_SOCommitment = new JPanel();
 		panelImg_SOCommitment.setBackground(Color.LIGHT_GRAY);
 		panelImg_SOCommitment.setBounds(10, 27, 581, 275);
-		iconSOCommitment = new  ImageIcon(getClass().getResource("/resource/SOCommitment.PNG"));
+		iconSOCommitment = new  ImageIcon(getClass().getResource("/resource/SOCommitment.png"));
 		imagemSOCommitment = new JLabel(iconSOCommitment);
 		imagemSOCommitment.setBounds(10, 27, 581, 275);
 		imagemSOCommitment.setSize(70, 96); // 70 96
@@ -3334,7 +3334,7 @@ public class JanBase {
 		JPanel panelImg_SNegAgreem = new JPanel();
 		panelImg_SNegAgreem.setBackground(Color.LIGHT_GRAY);
 		panelImg_SNegAgreem.setBounds(10, 27, 581, 275);
-		iconSNegAgree = new  ImageIcon(getClass().getResource("/resource/SNegAgree.PNG"));
+		iconSNegAgree = new  ImageIcon(getClass().getResource("/resource/SNegAgree.png"));
 		imagemSNegAgree = new JLabel(iconSNegAgree);
 		imagemSNegAgree.setBounds(10, 27, 581, 275);
 		imagemSNegAgree.setSize(70, 96); // 70 96
@@ -4120,98 +4120,98 @@ public class JanBase {
 		imgPattern.removeAll();
 				
 		if(panel.getName().equals("panelP_Provider")){
-			icon_P_Provider = new  ImageIcon(JanBase.class.getResource("/resource/P-Provider.PNG"));
+			icon_P_Provider = new  ImageIcon(JanBase.class.getResource("/resource/P-Provider.png"));
 			imagem_P_Provider = new JLabel(icon_P_Provider);
 			imagem_P_Provider.setBounds(10, 27, 581, 275);
 			imagem_P_Provider.setSize(70, 96); // 70 96		
 			imagem_P_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_P_Provider);
 		}else if(panel.getName().equals("panelO_Provider")){
-			icon_O_Provider = new  ImageIcon(JanBase.class.getResource("/resource/O-Provider.PNG"));
+			icon_O_Provider = new  ImageIcon(JanBase.class.getResource("/resource/O-Provider.png"));
 			imagem_O_Provider = new JLabel(icon_O_Provider);
 			imagem_O_Provider.setBounds(10, 27, 581, 275);
 			imagem_O_Provider.setSize(70, 96); // 70 96
 			imagem_O_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_O_Provider);
 		}else if(panel.getName().equals("panelP_TCustomer")){
-			icon_P_TCustomer = new  ImageIcon(JanBase.class.getResource("/resource/P-TCustomer.PNG"));
+			icon_P_TCustomer = new  ImageIcon(JanBase.class.getResource("/resource/P-TCustomer.png"));
 			imagem_P_TCustomer = new JLabel(icon_P_TCustomer);
 			imagem_P_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_P_TCustomer.setSize(70, 96); // 70 96
 			imagem_P_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_P_TCustomer);
 		}else if(panel.getName().equals("panelP_O_OU_Provider")){
-			icon_P_O_OU_Provider = new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-Provider.PNG"));
+			icon_P_O_OU_Provider = new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-Provider.png"));
 			imagem_P_O_OU_Provider = new JLabel(icon_P_O_OU_Provider);
 			imagem_P_O_OU_Provider.setBounds(10, 27, 581, 275);
 			imagem_P_O_OU_Provider.setSize(70, 96); // 70 96
 			imagem_P_O_OU_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_P_O_OU_Provider);
 		}else if(panel.getName().equals("panelP_O_OU_TCustomer")){
-			icon_P_O_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-TCustomer.PNG"));
+			icon_P_O_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-TCustomer.png"));
 			imagem_P_O_OU_TCustomer = new JLabel(icon_P_O_OU_TCustomer);
 			imagem_P_O_OU_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_P_O_OU_TCustomer.setSize(70, 96); // 70 96
 			imagem_P_O_OU_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_P_O_OU_TCustomer);
 		}else if(panel.getName().equals("panelP_OU_TCustomer")){
-			icon_P_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-TCustomer.PNG"));
+			icon_P_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-TCustomer.png"));
 			imagem_P_OU_TCustomer = new JLabel(icon_P_OU_TCustomer);
 			imagem_P_OU_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_P_OU_TCustomer.setSize(70, 96); // 70 96
 			imagem_P_OU_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_P_OU_TCustomer);
 		}else if(panel.getName().equals("panelP_O_TCustomer")){
-			icon_P_O_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-TCustomer.PNG"));
+			icon_P_O_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-TCustomer.png"));
 			imagem_P_O_TCustomer = new JLabel(icon_P_O_TCustomer);
 			imagem_P_O_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_P_O_TCustomer.setSize(70, 96); // 70 96
 			imagem_P_O_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_P_O_TCustomer);
 		}else if(panel.getName().equals("panelO_OU_TCustomer")){
-			icon_O_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-TCustomer.PNG"));
+			icon_O_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-TCustomer.png"));
 			imagem_O_OU_TCustomer = new JLabel(icon_O_OU_TCustomer);
 			imagem_O_OU_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_O_OU_TCustomer.setSize(70, 96); // 70 96
 			imagem_O_OU_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_O_OU_TCustomer);
 		}else if(panel.getName().equals("panelOU_TCustomer")){
-			icon_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/OU-TCustomer.PNG"));
+			icon_OU_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/OU-TCustomer.png"));
 			imagem_OU_TCustomer = new JLabel(icon_OU_TCustomer);
 			imagem_OU_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_OU_TCustomer.setSize(70, 96); // 70 96
 			imagem_OU_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_OU_TCustomer);
 		}else if(panel.getName().equals("panelO_TCustomer")){
-			icon_O_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/O-TCustomer.PNG"));
+			icon_O_TCustomer= new  ImageIcon(JanBase.class.getResource("/resource/O-TCustomer.png"));
 			imagem_O_TCustomer = new JLabel(icon_O_TCustomer);
 			imagem_O_TCustomer.setBounds(10, 27, 581, 275);
 			imagem_O_TCustomer.setSize(70, 96); // 70 96
 			imagem_O_TCustomer.setVisible(true);
 			imgPatternCustomer.add(imagem_O_TCustomer);
 		}else if(panel.getName().equals("panelP_OU_Provider")){
-			icon_P_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-Provider.PNG"));
+			icon_P_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-Provider.png"));
 			imagem_P_OU_Provider = new JLabel(icon_P_OU_Provider);
 			imagem_P_OU_Provider.setBounds(10, 27, 581, 275);
 			imagem_P_OU_Provider.setSize(70, 96); // 70 96
 			imagem_P_OU_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_P_OU_Provider);
 		}else if(panel.getName().equals("panelP_O_Provider")){
-			icon_P_O_Provider= new  ImageIcon(JanBase.class.getResource("/resource/P-O-Provider.PNG"));
+			icon_P_O_Provider= new  ImageIcon(JanBase.class.getResource("/resource/P-O-Provider.png"));
 			imagem_P_O_Provider = new JLabel(icon_P_O_Provider);
 			imagem_P_O_Provider.setBounds(10, 27, 581, 275);
 			imagem_P_O_Provider.setSize(70, 96); // 70 96
 			imagem_P_O_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_P_O_Provider);
 		}else if(panel.getName().equals("panelO_OU_Provider")){
-			icon_O_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-Provider.PNG"));
+			icon_O_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-Provider.png"));
 			imagem_O_OU_Provider = new JLabel(icon_O_OU_Provider);
 			imagem_O_OU_Provider.setBounds(10, 27, 581, 275);
 			imagem_O_OU_Provider.setSize(70, 96); // 70 96
 			imagem_O_OU_Provider.setVisible(true);
 			imgPatternProvider.add(imagem_O_OU_Provider);
 		}else if(panel.getName().equals("panelOU_Provider")){
-			icon_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/OU-Provider.PNG"));
+			icon_OU_Provider= new  ImageIcon(JanBase.class.getResource("/resource/OU-Provider.png"));
 			imagem_OU_Provider = new JLabel(icon_OU_Provider);
 			imagem_OU_Provider.setBounds(10, 27, 581, 275);
 			imagem_OU_Provider.setSize(70, 96); // 70 96
@@ -4222,98 +4222,98 @@ public class JanBase {
 		//Hired Provider and Service Customer
 		
 		if(panel.getName().equals("panelP_HProvider")){
-			icon_P_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/P-HProvider.PNG"));
+			icon_P_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/P-HProvider.png"));
 			imagem_P_HProvider = new JLabel(icon_P_HProvider);
 			imagem_P_HProvider.setBounds(10, 27, 581, 275);
 			imagem_P_HProvider.setSize(70, 96); // 70 96
 			imagem_P_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_P_HProvider);
 		}else if(panel.getName().equals("panelO_HProvider")){
-			icon_O_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/O-HProvider.PNG"));
+			icon_O_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/O-HProvider.png"));
 			imagem_O_HProvider = new JLabel(icon_O_HProvider);
 			imagem_O_HProvider.setBounds(10, 27, 581, 275);
 			imagem_O_HProvider.setSize(70, 96); // 70 96
 			imagem_O_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_O_HProvider);
 		}else if(panel.getName().equals("panelP_Customer")){
-			icon_P_Customer = new  ImageIcon(JanBase.class.getResource("/resource/P-Customer.PNG"));
+			icon_P_Customer = new  ImageIcon(JanBase.class.getResource("/resource/P-Customer.png"));
 			imagem_P_Customer = new JLabel(icon_P_Customer);
 			imagem_P_Customer.setBounds(10, 27, 581, 275);
 			imagem_P_Customer.setSize(70, 96); // 70 96
 			imagem_P_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_P_Customer);
 		}else if(panel.getName().equals("panelP_O_OU_HProvider")){
-			icon_P_O_OU_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-HProvider.PNG"));
+			icon_P_O_OU_HProvider = new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-HProvider.png"));
 			imagem_P_O_OU_HProvider = new JLabel(icon_P_O_OU_HProvider);
 			imagem_P_O_OU_HProvider.setBounds(10, 27, 581, 275);
 			imagem_P_O_OU_HProvider.setSize(70, 96); // 70 96
 			imagem_P_O_OU_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_P_O_OU_HProvider);
 		}else if(panel.getName().equals("panelP_O_OU_Customer")){
-			icon_P_O_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-Customer.PNG"));
+			icon_P_O_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-OU-Customer.png"));
 			imagem_P_O_OU_Customer = new JLabel(icon_P_O_OU_Customer);
 			imagem_P_O_OU_Customer.setBounds(10, 27, 581, 275);
 			imagem_P_O_OU_Customer.setSize(70, 96); // 70 96
 			imagem_P_O_OU_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_P_O_OU_Customer);
 		}else if(panel.getName().equals("panelP_OU_Customer")){
-			icon_P_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-Customer.PNG"));
+			icon_P_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-Customer.png"));
 			imagem_P_OU_Customer = new JLabel(icon_P_OU_Customer);
 			imagem_P_OU_Customer.setBounds(10, 27, 581, 275);
 			imagem_P_OU_Customer.setSize(70, 96); // 70 96
 			imagem_P_OU_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_P_OU_Customer);
 		}else if(panel.getName().equals("panelP_O_Customer")){
-			icon_P_O_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-Customer.PNG"));
+			icon_P_O_Customer= new  ImageIcon(JanBase.class.getResource("/resource/P-O-Customer.png"));
 			imagem_P_O_Customer = new JLabel(icon_P_O_Customer);
 			imagem_P_O_Customer.setBounds(10, 27, 581, 275);
 			imagem_P_O_Customer.setSize(70, 96); // 70 96
 			imagem_P_O_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_P_O_Customer);
 		}else if(panel.getName().equals("panelO_OU_Customer")){
-			icon_O_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-Customer.PNG"));
+			icon_O_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-Customer.png"));
 			imagem_O_OU_Customer = new JLabel(icon_O_OU_Customer);
 			imagem_O_OU_Customer.setBounds(10, 27, 581, 275);
 			imagem_O_OU_Customer.setSize(70, 96); // 70 96
 			imagem_O_OU_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_O_OU_Customer);
 		}else if(panel.getName().equals("panelOU_Customer")){
-			icon_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/OU-Customer.PNG"));
+			icon_OU_Customer= new  ImageIcon(JanBase.class.getResource("/resource/OU-Customer.png"));
 			imagem_OU_Customer = new JLabel(icon_OU_Customer);
 			imagem_OU_Customer.setBounds(10, 27, 581, 275);
 			imagem_OU_Customer.setSize(70, 96); // 70 96
 			imagem_OU_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_OU_Customer);
 		}else if(panel.getName().equals("panelO_Customer")){
-			icon_O_Customer= new  ImageIcon(JanBase.class.getResource("/resource/O-Customer.PNG"));
+			icon_O_Customer= new  ImageIcon(JanBase.class.getResource("/resource/O-Customer.png"));
 			imagem_O_Customer = new JLabel(icon_O_Customer);
 			imagem_O_Customer.setBounds(10, 168, 291, 146);
 			imagem_O_Customer.setSize(70, 96); // 70 96
 			imagem_O_Customer.setVisible(true);
 			imgPatternServiceCustomer.add(imagem_O_Customer);
 		}else if(panel.getName().equals("panelP_OU_HProvider")){
-			icon_P_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-HProvider.PNG"));
+			icon_P_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/P-OU-HProvider.png"));
 			imagem_P_OU_HProvider = new JLabel(icon_P_OU_HProvider);
 			imagem_P_OU_HProvider.setBounds(10, 27, 581, 275);
 			imagem_P_OU_HProvider.setSize(70, 96); // 70 96
 			imagem_P_OU_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_P_OU_HProvider);
 		}else if(panel.getName().equals("panelP_O_HProvider")){
-			icon_P_O_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/P-O-HProvider.PNG"));
+			icon_P_O_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/P-O-HProvider.png"));
 			imagem_P_O_HProvider = new JLabel(icon_P_O_HProvider);
 			imagem_P_O_HProvider.setBounds(10, 27, 581, 275);
 			imagem_P_O_HProvider.setSize(70, 96); // 70 96
 			imagem_P_O_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_P_O_HProvider);
 		}else if(panel.getName().equals("panelO_OU_HProvider")){
-			icon_O_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-HProvider.PNG"));
+			icon_O_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/O-OU-HProvider.png"));
 			imagem_O_OU_HProvider = new JLabel(icon_O_OU_HProvider);
 			imagem_O_OU_HProvider.setBounds(10, 27, 581, 275);
 			imagem_O_OU_HProvider.setSize(70, 96); // 70 96
 			imagem_O_OU_HProvider.setVisible(true);
 			imgPatternHiredProvider.add(imagem_O_OU_HProvider);
 		}else if(panel.getName().equals("panelOU_HProvider")){
-			icon_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/OU-HProvider.PNG"));
+			icon_OU_HProvider= new  ImageIcon(JanBase.class.getResource("/resource/OU-HProvider.png"));
 			imagem_OU_HProvider = new JLabel(icon_OU_HProvider);
 			imagem_OU_HProvider.setBounds(10, 27, 581, 275);
 			imagem_OU_HProvider.setSize(70, 96); // 70 96
@@ -4325,7 +4325,7 @@ public class JanBase {
 		
 		if(panel.getName().equals("panelSOfferAgreeFields")){
 			imgPattern.setVisible(true);
-			icon_SOfferAgree_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SOfferAgree.PNG"));
+			icon_SOfferAgree_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SOfferAgree.png"));
 			imagem_SOfferAgree_Fields = new JLabel(icon_SOfferAgree_Fields);
 			imagem_SOfferAgree_Fields.setBounds(10, 27, 581, 275);
 			imagem_SOfferAgree_Fields.setSize(70, 96); // 70 96
@@ -4334,7 +4334,7 @@ public class JanBase {
 		}
 		if(panel.getName().equals("panelSNegAgreeFields")){
 			imgPattern.setVisible(true);
-			icon_SNegAgree_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SNegAgree.PNG"));
+			icon_SNegAgree_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SNegAgree.png"));
 			imagem_SNegAgree_Fields = new JLabel(icon_SNegAgree_Fields);
 			imagem_SNegAgree_Fields.setBounds(10, 27, 581, 275);
 			imagem_SNegAgree_Fields.setSize(70, 96); // 70 96
@@ -4343,7 +4343,7 @@ public class JanBase {
 		}
 		if(panel.getName().equals("panelSNegotiationFields")){
 			imgPattern.setVisible(true);
-			icon_SNegotiation_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SNegotiation.PNG"));
+			icon_SNegotiation_Fields= new  ImageIcon(JanBase.class.getResource("/resource/SNegotiation.png"));
 			imagem_SNegotiation_Fields = new JLabel(icon_SNegotiation_Fields);
 			imagem_SNegotiation_Fields.setBounds(10, 27, 581, 275);
 			imagem_SNegotiation_Fields.setSize(70, 96); // 70 96
