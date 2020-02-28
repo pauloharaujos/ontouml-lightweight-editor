@@ -3720,14 +3720,6 @@ public class JanBase {
 		txtOrgUnitTC_P_OU_TCustomer.setBounds(178, 90, 103, 20);
 		panelP_OU_TCustomer.add(txtOrgUnitTC_P_OU_TCustomer);
 		
-		JLabel lblOrgProvider_P_OU_TCustomer = new JLabel("Organization Unit");
-		lblOrgProvider_P_OU_TCustomer.setBounds(10, 129, 113, 14);
-		panelP_OU_TCustomer.add(lblOrgProvider_P_OU_TCustomer);
-		
-		txtOrgProvider_P_OU_TCustomer = new JTextField();
-		txtOrgProvider_P_OU_TCustomer.setColumns(10);
-		txtOrgProvider_P_OU_TCustomer.setBounds(178, 126, 103, 20);
-		panelP_OU_TCustomer.add(txtOrgProvider_P_OU_TCustomer);
 		
 		//PANEL P_O_TCustomer
 		panelP_O_TCustomer = new JPanel();
