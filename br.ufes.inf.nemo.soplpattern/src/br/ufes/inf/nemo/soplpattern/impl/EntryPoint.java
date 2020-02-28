@@ -65,6 +65,7 @@ public class EntryPoint extends SOPLPattern{
 		Classifier rolePersonTC = null;
 		Classifier roleOrganizationProvider = null;
 		Classifier collectiveB = null;
+		Classifier collectiveC = null;
 		Classifier roleTargetCustomer = null;
 		Classifier relatorOffering = null; //Nome da Offering
 		Classifier relatorAgreement = null; //Nome do Agreement
@@ -114,6 +115,27 @@ public class EntryPoint extends SOPLPattern{
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceProvider, collectiveA));
 		}else if(patternProviderSelected == 4){// Pattern P-O-OU-Provider
+			
+			//Create Person Provider
+			String personProvider = janBase.getTxtPersonProvider_P_O_OU_Provider().getText();			
+			collectiveB  = this.createClassifier(personProvider, "role", 200, 100);
+			
+			//Create Organization Unit Provider
+			String orgUnitProvider = janBase.getTxtOrgUnitProvider_P_O_OU_Provider().getText();			
+			collectiveC  = this.createClassifier(orgUnitProvider, "role", 200, 50);
+			
+			//Create Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_P_O_OU_Provider().getText();
+			roleServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
+			
+			//Create Organization Provider
+			String orgProvider = janBase.getTxtOrgProvider_P_O_OU_Provider().getText();			
+			collectiveA  = this.createClassifier(orgProvider, "role", 200, 150);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleServiceProvider, collectiveC));
+			
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "", collectiveA, collectiveB,1,1,1,1).getAdded().get(0);
+			fix.includeAdded(association);
 			
 		}else if(patternProviderSelected == 5){// Pattern O-OU-Provider
 			//Create Organization Unit Provider
