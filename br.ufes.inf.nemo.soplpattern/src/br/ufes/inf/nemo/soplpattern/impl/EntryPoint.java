@@ -67,13 +67,13 @@ public class EntryPoint extends SOPLPattern{
 		Classifier collectiveB = null;
 		Classifier collectiveC = null;
 		Classifier roleTargetCustomer = null;
-		Classifier relatorOffering = null; //Nome da Offering
-		Classifier relatorAgreement = null; //Nome do Agreement
-		Classifier relatorNegotiation = null; //Nome da Negotiation
+		Classifier relatorOffering = null;
+		Classifier relatorAgreement = null; 
+		Classifier relatorNegotiation = null; 
 		Classifier roleServiceCustomer = null;
 		Classifier roleHiredServiceProvider = null;
-		Classifier categorySODescription = null; // Service Offering Description
-		Classifier categorySOCommitment = null; // Service Offering Commitment
+		Classifier categorySODescription = null;
+		Classifier categorySOCommitment = null; 
 		Classifier categorySADescription = null;
 		Classifier modeServiceCustomerCommit = null;
 		Classifier modeHPCommitments = null;
@@ -305,8 +305,8 @@ public class EntryPoint extends SOPLPattern{
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.COMPONENTOF, "", relatorOffering, categorySOCommitment,1,1,1,-1).getAdded().get(0);
 			fix.includeAdded(association);	
 		}	
-		if(yes_no) { // O Usuario deseja modelar 1 dos 3 padroes : SNegAgree ou SOfferAgree ou SNegotiation
-			if (pattern_yes_no_selecionado == 1) { //O Usuario escolheu o pattern SNegAgree
+		if(yes_no) { // SNegAgree or SOfferAgree or SNegotiation
+			if (pattern_yes_no_selecionado == 1) { //If SNegAgree
 				
 				String agreement = janBase.getTextServiceAgreement().getText();
 				relatorAgreement= this.createClassifier(agreement , "Relator",  550, 200);	
@@ -319,11 +319,8 @@ public class EntryPoint extends SOPLPattern{
 				association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "", relatorOffering, relatorAgreement,1,1,0,-1).getAdded().get(0);
 				fix.includeAdded(association);	
 				
-				// ESSES CARAS ESTAO FIXOS PQ ELES SAO OS MESMOS QUE FORAM DEFINIDOS NA OFFERING.
-				// O TARGET CUSTOMER PASSOU A SER HIRED SERVICE CUSTOMER
-				// O SERVICE PROVIDER PASSOU A SER HIRED SERVICE PROVIDER
-				// OBS: EU NAO POSSO PERMITIR QUE O USUARIO DIGITE UM NOME PARA HIRED SERVICE PROVIDER E SERVICE CUSTOMER, POIS 
-				// EU NAO TERIA GARANTIA QUE OS DOIS SAO A MESMA PESSOA, E ELES PRECISAM SER A MESMA PESSOA.
+				//Theses elements was defined in the Offering. So, Target Customer is now the Hired Service Customer
+				// and the Service Provider is now the Hired Service Provider
 				roleServiceCustomer = this.createClassifier("Service Customer", "RoleMixin", 900, 200);		
 				roleHiredServiceProvider = this.createClassifier("Hired Service Provider", "RoleMixin", 0, 300);	
 				
@@ -336,16 +333,13 @@ public class EntryPoint extends SOPLPattern{
 				association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "is bound to", roleServiceCustomer, relatorAgreement, 1,-1, 1,-1).getAdded().get(0);
 				fix.includeAdded(association);	
 				
-			}else if (pattern_yes_no_selecionado == 2) { //O Usuario escolheu o pattern SOfferAgree
+			}else if (pattern_yes_no_selecionado == 2) { // If SOfferAgree
 				
 				String agreement = janBase.getTextServiceAgreement_1().getText();
 				relatorAgreement= this.createClassifier(agreement , "Relator",  550, 200);	
 				
-				// ESSES CARAS ESTAO FIXOS PQ ELES SAO OS MESMOS QUE FORAM DEFINIDOS NA OFFERING.
-				// O TARGET CUSTOMER PASSOU A SER HIRED SERVICE CUSTOMER
-				// O SERVICE PROVIDER PASSOU A SER HIRED SERVICE PROVIDER
-				// OBS: EU NAO POSSO PERMITIR QUE O USUARIO DIGITE UM NOME PARA HIRED SERVICE PROVIDER E SERVICE CUSTOMER, POIS 
-				// EU NAO TERIA GARANTIA QUE OS DOIS SAO A MESMA PESSOA, E ELES PRECISAM SER A MESMA PESSOA.
+				//Theses elements was defined in the Offering. So, Target Customer is now the Hired Service Customer
+				// and the Service Provider is now the Hired Service Provider
 				roleServiceCustomer = this.createClassifier("Service Customer", "RoleMixin", 900, 200);		
 				roleHiredServiceProvider = this.createClassifier("Hired Service Provider", "RoleMixin", 0, 300);	
 				
@@ -360,7 +354,7 @@ public class EntryPoint extends SOPLPattern{
 				
 				association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "is bound to", roleServiceCustomer, relatorAgreement, 1,-1, 1,-1).getAdded().get(0);
 				fix.includeAdded(association);	
-			}else if (pattern_yes_no_selecionado == 3) { //O Usuario escolheu o pattern SNegotiation
+			}else if (pattern_yes_no_selecionado == 3) { //If SNegotiation
 				String negotiation = janBase.getTextServiceNegotiation_1().getText();
 				relatorNegotiation= this.createClassifier(negotiation , "Relator",  400, 400);	
 	
@@ -369,8 +363,8 @@ public class EntryPoint extends SOPLPattern{
 			}
 		}
 				
-		// Association between Service Provider, Target Customer and Service Offering/Service Negotiation
-		if( (yes_no) && (pattern_yes_no_selecionado != 2) ) { //Quando há uma NEGOTIATION, o service customer e target Customer sao ligados a ela e nao a offering
+		// If SNegAgree
+		if( (yes_no) && (pattern_yes_no_selecionado != 2) ) { // When we have a Negotiation, the Service Customer and Target Customer will be linked to the Negotiation, not the Offering.
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "participates in", roleServiceProvider, relatorNegotiation, 1, 1, 0, -1).getAdded().get(0);
 			fix.includeAdded(association);	
 			
@@ -378,7 +372,7 @@ public class EntryPoint extends SOPLPattern{
 			fix.includeAdded(association);
 		}
 		
-		if( (pattern_yes_no_selecionado == 3) || (!yes_no) ) {//No caso da Negotiation, o usuario finaliza a modelagem por aqui !
+		if( (pattern_yes_no_selecionado == 3) || (!yes_no) ) {// If SNegotiation, the workflow ends here
 			
 			// Create relation between provider, target customer and offering
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "is bound to", roleServiceProvider, relatorOffering,1,1,1,-1).getAdded().get(0);
@@ -505,7 +499,7 @@ public class EntryPoint extends SOPLPattern{
 		Association association = null;
 		Classifier collectiveA = null;
 		Classifier collectiveB = null;
-		Classifier relatorAgreement = null; //Nome do Agreement
+		Classifier relatorAgreement = null;
 		Classifier roleServiceCustomer = null;
 		Classifier roleHiredServiceProvider = null;
 		Classifier categorySADescription = null;
@@ -540,7 +534,7 @@ public class EntryPoint extends SOPLPattern{
 			String customer = janBase.getTxtTargetCustomer_P_Customer().getText();
 			roleServiceCustomer = this.createClassifier(customer, "RoleMixin", 900, 100);
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));
-		}
+		} 
 
 		
 		//SAgreement

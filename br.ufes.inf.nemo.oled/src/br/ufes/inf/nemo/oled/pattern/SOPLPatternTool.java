@@ -44,11 +44,7 @@ public class SOPLPatternTool {
 	}
 	
 	public static Fix tryToRun(DiagramManager diagramManager, ElementType elem,double x,double y){
-				
-		//SOPLPattern pm = null;	
-		//DiagramManager dm = null;		
-				
-		
+	
 		switch (elem) {	
 		
 		case SOFFERING:
@@ -61,16 +57,10 @@ public class SOPLPatternTool {
 			break;
 		default:
 			break;
-			
 		}
-	
 		pm.runPattern(diagramManager); 
-		Fix fix = null;
-//		fix = pm.getFix();
-//		diagramManager.updateOLED(fix);		
-		
+		Fix fix = null;			
 		return fix;
-
 	}	
 	
 	public static void runPattern(final DiagramManager diagramManager,final ElementType elementType, final double x, final double y)  {
@@ -88,21 +78,9 @@ public class SOPLPatternTool {
 		}
 	}
 	
-	public static void updateOLED(Fix fix){
-		
-		//Fix fix = null;		
+	public static void updateOLED(Fix fix){		
 		dm.updateOLED(fix);
-		
-		//return fix;
 	 }
-	
-//	public SOPLPattern getPm() {
-//		return pm;
-//	}
-//
-//	public void setPm(SOPLPattern pm) {
-//		this.pm = pm;
-//	}
 
 	public DiagramManager getDm() {
 		return dm;
@@ -112,4 +90,4 @@ public class SOPLPatternTool {
 		dm = diagramManager;
 	}
 	
-	}
+}

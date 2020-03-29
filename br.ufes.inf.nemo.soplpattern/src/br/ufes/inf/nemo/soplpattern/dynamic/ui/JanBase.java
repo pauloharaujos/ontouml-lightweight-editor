@@ -30,7 +30,7 @@ import javax.swing.JProgressBar;
 public class JanBase {
 
 	private JFrame frame;
-	private int painelSelecionado = 0; //Utilizado no botao Next . Sempre que passamos para outro painel(Next) ou voltamos(Go Back) essa variavel incrementa ou decrementa
+	private int painelSelecionado = 0;
 	private JTextField txtServiceProvider_P_Provider;
 	private JTextField txtPerson_P_Provider;
 	private JTextField txtTargetCustomer_P_TCustomer;
@@ -114,8 +114,6 @@ public class JanBase {
 	private JTextField txtServiceProvider_O_HProvider;
 	private JTextField txtOrganization_O_HProvider;
 
-	
-	//PANEL PROVIDER AND TARGET CUSTOMER (VARIANT PATTERNS)	
 	private static JPanel imgPatternProvider;
 	private static JPanel imgPatternCustomer;
 	private static JPanel imgPattern = new JPanel();
@@ -136,11 +134,10 @@ public class JanBase {
 	private static JPanel panelO_OU_Provider;
 	private static JPanel panelOU_Provider;
 	private static JPanel panelO_Provider;
-	
-	//PANEL HIRED PROVIDER AND SERVICE CUSTOMER (VARIANT PATTERNS) - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FALTA IMPLEMENTAR!!!!!!!!!!!	
+		
 	private static JPanel imgPatternHiredProvider;
 	private static JPanel imgPatternServiceCustomer;
-	private static JPanel panelHiredP_ServiceC_Subgroup; //Panel que contem todos os paines de cada variant patter que pode ser escolhido.
+	private static JPanel panelHiredP_ServiceC_Subgroup;
 	private static JPanel panelP_HProvider;
 	private static JPanel panelO_OU_HProvider;
 	private static JPanel panelPatternHiredProvider;
@@ -220,8 +217,6 @@ public class JanBase {
 	ButtonGroup rdYesNoGroup;
 	
 	
-	//Imagens
-	
 	 //Provider - Variant Patterns
 	
 	private static ImageIcon icon_P_Provider;
@@ -290,8 +285,6 @@ public class JanBase {
 	private static ImageIcon icon_P_OU_Customer;
 	private static JLabel imagem_P_OU_Customer;
 	
-	
-	//Imagens para o restante dos padrões
 	private ImageIcon iconSOffering;
 	private JLabel imagemSOffering;
 	private ImageIcon iconSODescription;
@@ -301,7 +294,7 @@ public class JanBase {
 	private ImageIcon iconSNegAgree;
 	private JLabel imagemSNegAgree;
 
-	public int entrypoint = 1; //Por padrao o entrypoint é a SOffering
+	public int entrypoint = 1; //By default, entrypoint is 1 = SOffering
 	
 	//SAgreement
 	private static JPanel panelSAgreement;
@@ -1797,9 +1790,9 @@ public class JanBase {
 	{
 		desabilitaPaineisPrincipais();
 		if(entrypoint == 1) {// 1 = Entry Point SOffering
-			trocaPainelPrincipalSOffering(0); //Comeca do Panel 0 - SOffering
+			trocaPainelPrincipalSOffering(0); 
 		}else{ // 2 = Entry Point SAgreement
-			trocaPainelPrincipalSAgreement(0);  //Comeca do Panel 0 - SAgreement
+			trocaPainelPrincipalSAgreement(0);  
 		}
 	}
 	
@@ -3354,7 +3347,7 @@ public class JanBase {
 		btnCreateConcepts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
 				
-				//Verifica os radios selecionados
+				//Check selected radios
 				int rdProviderSubgroupSelected = JanBase.getRadioProviderSubgroupSelected();
 				int rdCustomerSubgroupSelected = JanBase.getRadioCustomerSubgroupSelected();
 				int rdHiredProviderSubgroupSelected = JanBase.getRadioHiredProviderSubgroupSelected();
@@ -3364,7 +3357,7 @@ public class JanBase {
 					yes_no = true;
 				}
 				
-				//Verifica qual dos 3 padroes opcionais foi selecionado.
+				//Check what pattern was selected
 				int pattern_yes_no_selecionado = 0;
 				if(rdbtnSnegagree.isSelected()) {
 					pattern_yes_no_selecionado = 1;
@@ -3536,7 +3529,6 @@ public class JanBase {
 		imgPatternCustomer.setBounds(325, 168, 291, 146);
 		panelPCSubgroup.add(imgPatternCustomer);
 		
-		//Possiveis paineis de escolha
 		
 		 //PANEL P_PROVIDER
 		panelP_Provider = new JPanel();
@@ -4107,7 +4099,7 @@ public class JanBase {
 		frame.setVisible(b);
 	}
 	
-	//Esse metodo verifica qual Variant Pattern foi selecionado e troca a imagem correspondente no JPanel
+	//Check what Variant Patter was selected and then change the panel image.
 	public static void trocaPainel(JPanel panel ){		
 		panel.setVisible(true);
 		imgPatternCustomer.removeAll();
@@ -4421,9 +4413,8 @@ public class JanBase {
 	/**
 	 * @param n
 	 */
-	public void trocaPainelPrincipalSOffering(int n){  //Esse metodo controla todo o fluxo partindo do Entry Point SOffering
+	public void trocaPainelPrincipalSOffering(int n){ 
 		painelSelecionado += n;
-		//Escolhe qual painel sera exibido !
 		desabilitaPaineisPrincipais();
 		
 		if(painelSelecionado == 0){	
@@ -4451,11 +4442,6 @@ public class JanBase {
 			imagemSteps.setIcon(new ImageIcon(JanBase.class.getResource("/resource/SAgreement_Steps_3.png")));
 			btnNext.setEnabled(false);
 			
-			//Pega o Provider/Hired Provider e o Target Customer/Customer, depois insere no JtextField correspondente para o
-			//usuario saber que o Hired Service Provider eh o cara que ele definiu na tela anterior como Provider.
-			
-			//Preciso criar um metodo que verifica qual subgroup foi selecionado, depois pega o provider e customer e seta no
-			//JtextField correto.
 			qualSubgroupFoiSelecionado();
 		}
 		if(painelSelecionado == 5){
@@ -4507,9 +4493,9 @@ public class JanBase {
 		}
 	}	
 	
-	public void trocaPainelPrincipalSAgreement(int n){ //Esse metodo controla todo o fluxo partindo do Entry Point SAgreement
+	public void trocaPainelPrincipalSAgreement(int n){ 
 		painelSelecionado += n;
-		//Escolhe qual painel sera exibido !
+		
 		desabilitaPaineisPrincipais();
 		
 		if(painelSelecionado == 0){
@@ -5601,37 +5587,4 @@ public class JanBase {
 	public JLabel getImagemSADescription() {
 		return imagemSADescription;
 	}
-	
-//	public void createDiagram() {
-//		//Verifica os radios selecionados
-//		int rdProviderSubgroupSelected = JanBase.getRadioProviderSubgroupSelected();
-//		int rdCustomerSubgroupSelected = JanBase.getRadioCustomerSubgroupSelected();
-//		int rdHiredProviderSubgroupSelected = JanBase.getRadioHiredProviderSubgroupSelected();
-//		int rdServiceCustomerSubgroupSelected = JanBase.getRadioServiceCustomerSubgroupSelected();
-//		boolean yes_no = false;
-//		if(rdbtnYes.isSelected()) {
-//			yes_no = true;
-//		}
-//		
-//		//Verifica qual dos 3 padroes opcionais foi selecionado.
-//		int pattern_yes_no_selecionado = 0;
-//		if(rdbtnSnegagree.isSelected()) {
-//			pattern_yes_no_selecionado = 1;
-//		}
-//		if(rdbtnSofferagree.isSelected()) {
-//			pattern_yes_no_selecionado = 2;
-//		}
-//		if(rdbtnSnegotiation.isSelected()) {
-//			pattern_yes_no_selecionado = 3;
-//		}
-//							
-//		if(entrypoint == 1) {
-//			soplPattern.getSpecificFixSOffering(rdProviderSubgroupSelected, rdCustomerSubgroupSelected, yes_no, pattern_yes_no_selecionado);	
-//
-//		}else if(entrypoint == 2) {
-//			soplPattern.getSpecificFixSAgreement(rdHiredProviderSubgroupSelected, rdServiceCustomerSubgroupSelected);	
-//
-//		}
-//		frame.dispose();
-//	}
 }
