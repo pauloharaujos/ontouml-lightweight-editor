@@ -499,9 +499,16 @@ public class EntryPoint extends SOPLPattern{
 		Association association = null;
 		Classifier collectiveA = null;
 		Classifier collectiveB = null;
+		Classifier collectiveC = null;
 		Classifier relatorAgreement = null;
 		Classifier roleServiceCustomer = null;
 		Classifier roleHiredServiceProvider = null;
+		Classifier roleOrgUnitProvider = null;
+		Classifier roleOrganizationProvider = null;
+		Classifier rolePersonProvider = null;
+		Classifier rolePersonTC = null;  
+		Classifier roleOrgUnitTC= null;
+		Classifier roleOrgTC= null;
 		Classifier categorySADescription = null;
 		Classifier modeServiceCustomerCommit = null;
 		Classifier modeHPCommitments = null;
@@ -522,6 +529,94 @@ public class EntryPoint extends SOPLPattern{
 			roleHiredServiceProvider = this.createClassifier(hiredserviceProvider, "RoleMixin", 0, 150);	
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
+		}else if(patternHiredProviderSelected == 2){// Pattern O-HProvider
+			//Create Organization
+			String organization = janBase.getTxtOrganization_O_HProvider().getText();			
+			collectiveA  = this.createClassifier(organization, "kind", 200, 150);
+			
+			//Create Hired Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_O_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "Role", 200, 300);	
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
+		}else if(patternHiredProviderSelected == 3){// Pattern OU-HProvider
+			//Create Organization Unit
+			String orgUnit = janBase.getTxtOrgUnit_OU_HProvider().getText();			
+			collectiveA  = this.createClassifier(orgUnit, "kind", 200, 150);
+			
+			//Create Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_OU_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "Role", 200, 300);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
+		}else if(patternHiredProviderSelected == 4){// Pattern P-O-OU-HProvider
+			
+			//Create Person Provider
+			String personProvider = janBase.getTxtPersonProvider_P_O_OU_HProvider().getText();			
+			collectiveB  = this.createClassifier(personProvider, "role", 200, 100);
+			
+			//Create Organization Unit Provider
+			String orgUnitProvider = janBase.getTxtOrgUnitProvider_P_O_OU_HProvider().getText();			
+			collectiveC  = this.createClassifier(orgUnitProvider, "role", 200, 50);
+			
+			//Create Hired Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_P_O_OU_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
+			
+			//Create Organization Hired Provider
+			String orgProvider = janBase.getTxtOrgProvider_P_O_OU_HProvider().getText();			
+			collectiveA  = this.createClassifier(orgProvider, "role", 200, 150);
+			
+			fix.addAll(outcomeFixer.createGeneralization(collectiveC, roleHiredServiceProvider ));
+			fix.addAll(outcomeFixer.createGeneralization(collectiveB, roleHiredServiceProvider ));
+			fix.addAll(outcomeFixer.createGeneralization(collectiveA, roleHiredServiceProvider ));	
+		}else if(patternHiredProviderSelected == 5){// Pattern O-OU-HProvider
+			//Create Organization Unit Provider
+			String orgUnitProvider = janBase.getTxtOrgUnitProvider_O_OU_HProvider().getText();			
+			roleOrgUnitProvider  = this.createClassifier(orgUnitProvider, "role", 150, 450);
+			
+			//Create Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_O_OU_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
+			
+			//Create Organization Hired Provider
+			String organizationProvider = janBase.getTxtOrganizationProvider_O_OU_HProvider().getText();
+			roleOrganizationProvider = this.createClassifier(organizationProvider, "role", 250, 450);
+		
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgUnitProvider, roleHiredServiceProvider));	
+			fix.addAll(outcomeFixer.createGeneralization(roleOrganizationProvider, roleHiredServiceProvider));	
+		}else if(patternHiredProviderSelected == 6){// Pattern P-O-HProvider
+			//Create Organization Unit Hired Provider
+			String personProvider = janBase.getTxtPersonProvider_P_O_HProvider().getText();			
+			rolePersonProvider  = this.createClassifier(personProvider, "role", 150, 450);
+			
+			//Create Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_P_O_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
+			
+			//Create Organization Hired Provider
+			String organizationProvider = janBase.getTxtOrganizationProvider_P_O_HProvider().getText();
+			roleOrganizationProvider = this.createClassifier(organizationProvider, "role", 250, 450); 
+		
+			fix.addAll(outcomeFixer.createGeneralization(rolePersonProvider, roleHiredServiceProvider));	
+			fix.addAll(outcomeFixer.createGeneralization(roleOrganizationProvider, roleHiredServiceProvider));	
+		}else if(patternHiredProviderSelected == 7){// Pattern P-OU-HProvider
+			
+			//Create Person Provider
+			String personProvider = janBase.getTxtPersonProvider_P_OU_HProvider().getText();			
+			collectiveB  = this.createClassifier(personProvider, "role", 200, 100);
+			
+			//Create Organization Unit Provider
+			String orgUnitProvider = janBase.getTxtOrgUnitProvider_P_OU_HProvider().getText();			
+			collectiveC  = this.createClassifier(orgUnitProvider, "role", 200, 50);
+			
+			//Create Service Provider
+			String serviceProvider = janBase.getTxtServiceProvider_P_OU_HProvider().getText();
+			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
+			
+			fix.addAll(outcomeFixer.createGeneralization(collectiveC, roleHiredServiceProvider ));
+			fix.addAll(outcomeFixer.createGeneralization(collectiveB, roleHiredServiceProvider ));
+			
 		}
 		
 		
@@ -534,6 +629,95 @@ public class EntryPoint extends SOPLPattern{
 			String customer = janBase.getTxtTargetCustomer_P_Customer().getText();
 			roleServiceCustomer = this.createClassifier(customer, "RoleMixin", 900, 100);
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));
+		}else if(patternServiceCustomerSelected == 2){// Pattern O-TCustomer
+			//Create Organization
+			String organization = janBase.getTxtOrganization_O_Customer().getText();			
+			collectiveB  = this.createClassifier(organization, "kind",600, 150);
+			
+			//Create Customer
+			String targetCustomer = janBase.getTxtTargetCustomer_O_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "Role", 600, 300);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));	
+		}else if(patternServiceCustomerSelected == 3){// Pattern OU-Customer
+			//Create Organization Unit
+			String orgUnit = janBase.getTxtOrgUnit_OU_Customer().getText();			
+			collectiveB  = this.createClassifier(orgUnit, "kind",600, 150);
+			
+			//Create Customer
+			String targetCustomer = janBase.getTxtTargetCustomer_OU_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "Role", 600, 300);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));	
+			
+		}else if(patternServiceCustomerSelected == 4){// Pattern P-O-OU-Customer
+			
+			//Create Person Target Customer
+			String personTC = janBase.getTxtPersonTC_P_O_OU_Customer().getText();			
+			rolePersonTC  = this.createClassifier(personTC, "role", 550, 450); 
+			
+			//Create Organization Unit  Customer
+			String orgUnitTC = janBase.getTxtOrgUnitTC_P_O_OU_Customer().getText();			
+			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
+			
+			//Create  Customer
+			String targetCustomer = janBase.getTxtTargetCustomer_P_O_OU_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
+			
+			//Create Organization  Customer
+			String organizationTC = janBase.getTxtOrgTC_P_O_OU_Customer().getText();
+			roleOrgTC = this.createClassifier(organizationTC, "role", 650, 450);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgUnitTC, roleServiceCustomer ));
+			fix.addAll(outcomeFixer.createGeneralization(rolePersonTC, roleServiceCustomer ));
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgTC, roleServiceCustomer ));
+		
+		}else if(patternServiceCustomerSelected == 5){// Pattern O-OU-Customer
+			//Create Organization Unit  Customer
+			String orgUnitTC = janBase.getTxtOrgUnitTC_O_OU_Customer().getText();			
+			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
+			
+			//Create  Customer
+			String targetCustomer = janBase.getTxtTargetCustomer_O_OU_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
+			
+			//Create Organization  Customer
+			String organizationTC = janBase.getTxtOrgTC_O_OU_Customer().getText();
+			roleOrgTC = this.createClassifier(organizationTC, "role", 650, 450);
+			
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgUnitTC, roleServiceCustomer));				
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgTC, roleServiceCustomer));	
+		}else if(patternServiceCustomerSelected == 6){// Pattern P-O-Customer
+			//Create Person Target Customer
+			String personTC = janBase.getTxtPersonTC_P_O_Customer().getText();			
+			rolePersonTC  = this.createClassifier(personTC, "role", 550, 450);
+			
+			//Create  Customer
+			String targetCustomer = janBase.getTxtTargetCustomer_P_O_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
+			
+			//Create Organization Customer
+			String organizationTC = janBase.getTxtOrgTC_P_O_Customer().getText();
+			roleOrgTC = this.createClassifier(organizationTC, "role", 650, 450);
+			
+			fix.addAll(outcomeFixer.createGeneralization(rolePersonTC, roleServiceCustomer));				
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgTC, roleServiceCustomer));	
+		}else if(patternServiceCustomerSelected == 7){// Pattern P-OU-Customer
+			
+			//Create Person Customer
+			String personTC = janBase.getTxtPersonTC_P_OU_Customer().getText();			
+			rolePersonTC  = this.createClassifier(personTC, "role", 550, 450);
+			
+			//Create Organization Unit Customer
+			String orgUnitTC = janBase.getTxtOrgUnitTC_P_OU_Customer().getText();			
+			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
+			
+			//Create Customer
+			String targetCustomer = janBase.getTxtTargetCustomerTC_P_OU_Customer().getText();
+			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
+			
+			fix.addAll(outcomeFixer.createGeneralization(rolePersonTC, roleServiceCustomer ));
+			fix.addAll(outcomeFixer.createGeneralization(roleOrgUnitTC, roleServiceCustomer ));
 		} 
 
 		
