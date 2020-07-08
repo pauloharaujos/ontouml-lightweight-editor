@@ -294,7 +294,7 @@ public class EntryPoint extends SOPLPattern{
 		if(!soDescription.equals("")) {			
 			categorySODescription = this.createClassifier(soDescription, "Category", 800, 0);
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "", categorySODescription, relatorOffering, 0,-1,1,1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "describes", categorySODescription, relatorOffering, 0,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);	
 		}	
 		
@@ -431,14 +431,14 @@ public class EntryPoint extends SOPLPattern{
 		
 		//Create SDelivery
 		String delivery = janBase.getSDelivery_txt().getText();		
-		eventSDelivery = this.createClassifier(delivery , "Role",  520, 100	);
+		eventSDelivery = this.createClassifier(delivery , "Role",  520, 100	); //Change to <<Event>>
 		
 		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "aims to fulfill", eventSDelivery, relatorAgreement, 0,-1,1,1).getAdded().get(0);
 		fix.includeAdded(association);
 		
 		//Create HPActions
 		String HPAction = janBase.getHPActions_txt().getText();		
-		eventHPAction = this.createClassifier(HPAction , "Role",  250, 50);
+		eventHPAction = this.createClassifier(HPAction , "Role",  250, 50);  //Change to <<Event>>
 		
 		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventHPAction, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
 		fix.includeAdded(association);
@@ -446,31 +446,31 @@ public class EntryPoint extends SOPLPattern{
 		fix.includeAdded(association);	
 		
 		//Create HPActionMotivation
-		String HPActionMotivation = janBase.getHPActionMotivation_txt().getText();		
-		eventHPActionMotivation = this.createClassifier(HPActionMotivation , "Role",  0, 600);
-		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventHPActionMotivation, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
-		fix.includeAdded(association);
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventHPActionMotivation, modeHPCommitments, 0,-1,1,-1).getAdded().get(0);
-		fix.includeAdded(association);
+//		String HPActionMotivation = janBase.getHPActionMotivation_txt().getText();		
+//		eventHPActionMotivation = this.createClassifier(HPActionMotivation , "Role",  0, 600);
+//		
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventHPActionMotivation, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
+//		fix.includeAdded(association);
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventHPActionMotivation, modeHPCommitments, 0,-1,1,-1).getAdded().get(0);
+//		fix.includeAdded(association);
 		
 		//Create SCActions
 		String SCAction = janBase.getSCActions_txt().getText();		
 		eventSCAction = this.createClassifier(SCAction , "Role",  500, 0);
 		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCAction, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
+		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCAction, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
 		fix.includeAdded(association);
 		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.COMPONENTOF, "", eventSDelivery, eventSCAction, 1,1,0,-1).getAdded().get(0);
 		fix.includeAdded(association);	
 		
 		//Create SCActionMotivation
-		String SCActionMotivation = janBase.getSCActionMotivation_txt().getText();		
-		eventSCActionMotivation = this.createClassifier(SCActionMotivation , "Role",  750, 600);
-		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCActionMotivation, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
-		fix.includeAdded(association);
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventSCActionMotivation, modeServiceCustomerCommit, 0,-1,1,-1).getAdded().get(0);
-		fix.includeAdded(association);
+//		String SCActionMotivation = janBase.getSCActionMotivation_txt().getText();		
+//		eventSCActionMotivation = this.createClassifier(SCActionMotivation , "Role",  750, 600);
+//		
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCActionMotivation, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
+//		fix.includeAdded(association);
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventSCActionMotivation, modeServiceCustomerCommit, 0,-1,1,-1).getAdded().get(0);
+//		fix.includeAdded(association);
 		
         //Create Interations
 		String HPCI = janBase.getInteractions_txt().getText();		
@@ -792,13 +792,13 @@ public class EntryPoint extends SOPLPattern{
 		fix.includeAdded(association);	
 		
 		//Create HPActionMotivation
-		String HPActionMotivation = janBase.getHPActionMotivation_txt().getText();		
-		eventHPActionMotivation = this.createClassifier(HPActionMotivation , "Role",  0, 600);
-		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventHPActionMotivation, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
-		fix.includeAdded(association);
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventHPActionMotivation, modeHPCommitments, 0,-1,1,-1).getAdded().get(0);
-		fix.includeAdded(association);
+//		String HPActionMotivation = janBase.getHPActionMotivation_txt().getText();		
+//		eventHPActionMotivation = this.createClassifier(HPActionMotivation , "Role",  0, 600);
+//		
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventHPActionMotivation, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
+//		fix.includeAdded(association);
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventHPActionMotivation, modeHPCommitments, 0,-1,1,-1).getAdded().get(0);
+//		fix.includeAdded(association);
 		
 		//Create SCActions
 		String SCAction = janBase.getSCActions_txt().getText();		
@@ -810,13 +810,13 @@ public class EntryPoint extends SOPLPattern{
 		fix.includeAdded(association);	
 		
 		//Create SCActionMotivation
-		String SCActionMotivation = janBase.getSCActionMotivation_txt().getText();		
-		eventSCActionMotivation = this.createClassifier(SCActionMotivation , "Role",  750, 600);
-		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCActionMotivation, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
-		fix.includeAdded(association);
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventSCActionMotivation, modeServiceCustomerCommit, 0,-1,1,-1).getAdded().get(0);
-		fix.includeAdded(association);
+//		String SCActionMotivation = janBase.getSCActionMotivation_txt().getText();		
+//		eventSCActionMotivation = this.createClassifier(SCActionMotivation , "Role",  750, 600);
+//		
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCActionMotivation, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
+//		fix.includeAdded(association);
+//		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "motivated by", eventSCActionMotivation, modeServiceCustomerCommit, 0,-1,1,-1).getAdded().get(0);
+//		fix.includeAdded(association);
 		
         //Create Interations
 		String HPCI = janBase.getInteractions_txt().getText();		

@@ -206,6 +206,7 @@ public class JanBase {
 	JRadioButton rdbtnSnegagree;
 	JRadioButton rdbtnSofferagree;
 	JRadioButton rdbtnYes;
+	JRadioButton rdbtnNo;
 	
 	//Button Groups
 	
@@ -215,6 +216,9 @@ public class JanBase {
 	ButtonGroup rdHiredProviderGroup;
 	ButtonGroup rdSNegAgreeSOfferAgreeSNegotiationGroup;
 	ButtonGroup rdYesNoGroup;
+	ButtonGroup rdHPActionMotivationGroup;
+	ButtonGroup rdSCActionMotivationGroup;
+	ButtonGroup rdInteractionMotivationGroup;
 	
 	
 	 //Provider - Variant Patterns
@@ -334,7 +338,6 @@ public class JanBase {
 	
 	//HPActionMotivation
 	private static JPanel panelHPActionMotivation;
-	private JTextField HPActionMotivation_txt;
 	private ImageIcon iconHPActionMotivation;
 	private JLabel imagemHPActionMotivation;
 	
@@ -346,7 +349,6 @@ public class JanBase {
 	
 	//SCActionMotivation
 	private static JPanel panelSCActionMotivation;
-	private JTextField SCActionMotivation_txt;
 	private ImageIcon iconSCActionMotivation;
 	private JLabel imagemSCActionMotivation;
 	
@@ -358,7 +360,6 @@ public class JanBase {
 	
 	//InteractionMotivation
 	private static JPanel panelInteractionMotivation;
-	private JTextField InteractionMotivation_txt;
 	private ImageIcon iconInteractionMotivation;
 	private JLabel imagemInteractionMotivation;
 	private JPanel panelSNegAgree_SOfferAgree_SNegotiation;
@@ -390,6 +391,21 @@ public class JanBase {
 	JButton btnBack;
 	JButton btnNext;
 	JButton btnCreateConcepts;
+	private JRadioButton rdbtnYes_1;
+	private JRadioButton rdbtnNo_1;
+	private JRadioButton rdbtnYes_2;
+	private JRadioButton rdbtnNo_2;
+	private JRadioButton rdbtnYes_3;
+	private JRadioButton rdbtnNo_3;
+	private JTextField HiredProviderCustomerInteraction;
+	private JTextField HiredProviderCommitment;
+	private JTextField ServiceCustomerCommitment;
+	private JTextField ServiceCustomerCommitmentMode;
+	private JTextField CustomerAction;
+	private JLabel label_2;
+	private JTextField HiredProviderAction;
+	private JTextField HiredProviderCommitmentMode;
+	private JLabel label_3;
 
 	/**
 	 * Create the application.
@@ -554,14 +570,6 @@ public class JanBase {
 		JanBase.panelHPActionMotivation = panelHPActionMotivation;
 	}
 
-	public JTextField getHPActionMotivation_txt() {
-		return HPActionMotivation_txt;
-	}
-
-	public void setHPActionMotivation_txt(JTextField hPActionMotivation_txt) {
-		HPActionMotivation_txt = hPActionMotivation_txt;
-	}
-
 	public ImageIcon getIconHPActionMotivation() {
 		return iconHPActionMotivation;
 	}
@@ -616,14 +624,6 @@ public class JanBase {
 
 	public static void setPanelSCActionMotivation(JPanel panelSCActionMotivation) {
 		JanBase.panelSCActionMotivation = panelSCActionMotivation;
-	}
-
-	public JTextField getSCActionMotivation_txt() {
-		return SCActionMotivation_txt;
-	}
-
-	public void setSCActionMotivation_txt(JTextField sCActionMotivation_txt) {
-		SCActionMotivation_txt = sCActionMotivation_txt;
 	}
 
 	public ImageIcon getIconSCActionMotivation() {
@@ -682,13 +682,6 @@ public class JanBase {
 		JanBase.panelInteractionMotivation = panelInteractionMotivation;
 	}
 
-	public JTextField getInteractionMotivation_txt() {
-		return InteractionMotivation_txt;
-	}
-
-	public void setInteractionMotivation_txt(JTextField interactionMotivation_txt) {
-		InteractionMotivation_txt = interactionMotivation_txt;
-	}
 
 	public ImageIcon getIconInteractionMotivation() {
 		return iconInteractionMotivation;
@@ -1856,7 +1849,6 @@ public class JanBase {
 		panelSOffering.setBounds(550, 11, 621, 511);
 		frame.getContentPane().add(panelSOffering);
 		panelSOffering.setLayout(null);
-		panelSOffering.setVisible(false);
 		
 		JPanel panelSOfferingInterno = new JPanel();
 		panelSOfferingInterno.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "SOffering", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -1892,142 +1884,6 @@ public class JanBase {
 		JLabel lblServiceOffering = new JLabel("Service Offering");
 		lblServiceOffering.setBounds(143, 352, 78, 14);
 		panelSOfferingInterno.add(lblServiceOffering);
-		
-		panelSNegAgree_SOfferAgree_SNegotiation = new JPanel();
-		panelSNegAgree_SOfferAgree_SNegotiation.setBounds(550, 11, 621, 511);
-		frame.getContentPane().add(panelSNegAgree_SOfferAgree_SNegotiation);
-		panelSNegAgree_SOfferAgree_SNegotiation.setLayout(null);
-		
-		panel_yes_no = new JPanel();
-		panel_yes_no.setBounds(20, 11, 591, 62);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(panel_yes_no);
-		panel_yes_no.setLayout(null);
-		
-		rdbtnYes = new JRadioButton("Yes");
-		rdbtnYes.setBounds(244, 32, 43, 23);
-		panel_yes_no.add(rdbtnYes);
-		
-		JRadioButton rdbtnNo = new JRadioButton("No");
-		rdbtnNo.setBounds(301, 32, 39, 23);
-		panel_yes_no.add(rdbtnNo);
-		
-		JLabel lblVocDesejaModelar = new JLabel("Do you want to model any of the patterns below ?");
-		lblVocDesejaModelar.setBounds(181, 11, 274, 14);
-		panel_yes_no.add(lblVocDesejaModelar);
-		
-		JPanel panel_options = new JPanel();
-		panel_options.setBounds(20, 85, 591, 67);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(panel_options);
-		panel_options.setLayout(null);
-		
-		rdbtnSnegagree = new JRadioButton("SNegAgree");
-		rdbtnSnegagree.setBounds(95, 20, 79, 23);
-		panel_options.add(rdbtnSnegagree);
-		
-		rdbtnSofferagree = new JRadioButton("SOfferAgree");
-		rdbtnSofferagree.setBounds(251, 20, 109, 23);
-		panel_options.add(rdbtnSofferagree);
-		
-		rdbtnSnegotiation = new JRadioButton("SNegotiation");
-		rdbtnSnegotiation.setBounds(429, 20, 109, 23);
-		panel_options.add(rdbtnSnegotiation);
-		
-		imgPattern.setBounds(119, 171, 416, 224);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(imgPattern);
-		
-		panelSOfferAgreeFields.setBounds(20, 406, 591, 94);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSOfferAgreeFields);
-		panelSOfferAgreeFields.setLayout(null);
-		panelSOfferAgreeFields.setName("panelSOfferAgreeFields");
-		panelSOfferAgreeFields.setVisible(false);
-		
-		JLabel lblServiceAgreement_1 = new JLabel("Service Agreement");
-		lblServiceAgreement_1.setBounds(90, 11, 109, 14);
-		panelSOfferAgreeFields.add(lblServiceAgreement_1);
-		
-		textServiceAgreement_1 = new JTextField();
-		textServiceAgreement_1.setBounds(236, 8, 278, 20);
-		panelSOfferAgreeFields.add(textServiceAgreement_1);
-		textServiceAgreement_1.setColumns(10);
-		
-		JLabel lblHiredServiceProvider_1 = new JLabel("Hired Service Provider");
-		lblHiredServiceProvider_1.setBounds(90, 36, 139, 14);
-		panelSOfferAgreeFields.add(lblHiredServiceProvider_1);
-		
-		textHiredServiceProvider_1 = new JTextField();
-		textHiredServiceProvider_1.setEditable(false);
-		textHiredServiceProvider_1.setBounds(236, 33, 278, 20);
-		panelSOfferAgreeFields.add(textHiredServiceProvider_1);
-		textHiredServiceProvider_1.setColumns(10);
-		
-		JLabel lblServiceCustomer_1 = new JLabel("Service Customer");
-		lblServiceCustomer_1.setBounds(90, 61, 139, 14);
-		panelSOfferAgreeFields.add(lblServiceCustomer_1);
-		
-		txtServiceCustomer_1 = new JTextField();
-		txtServiceCustomer_1.setEditable(false);
-		txtServiceCustomer_1.setBounds(236, 58, 278, 20);
-		panelSOfferAgreeFields.add(txtServiceCustomer_1);
-		txtServiceCustomer_1.setColumns(10);
-		
-		panelSNegotiationFields.setBounds(20, 406, 591, 94);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSNegotiationFields);
-		panelSNegotiationFields.setLayout(null);
-		panelSNegotiationFields.setName("panelSNegotiationFields");
-		panelSNegotiationFields.setVisible(false);
-		
-		JLabel lblServiceNegotiation_1 = new JLabel("Service Negotiation");
-		lblServiceNegotiation_1.setBounds(147, 38, 117, 14);
-		panelSNegotiationFields.add(lblServiceNegotiation_1);
-		
-		textServiceNegotiation_1 = new JTextField();
-		textServiceNegotiation_1.setBounds(276, 35, 230, 20);
-		panelSNegotiationFields.add(textServiceNegotiation_1);
-		textServiceNegotiation_1.setColumns(10);
-		
-		panelSNegAgreeFields.setBounds(20, 406, 591, 94);
-		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSNegAgreeFields);
-		panelSNegAgreeFields.setLayout(null);
-		panelSNegAgreeFields.setName("panelSNegAgreeFields");
-		panelSNegAgreeFields.setVisible(false);
-		
-		JLabel lblServiceNegotiation = new JLabel("Service Negotiation");
-		lblServiceNegotiation.setBounds(10, 11, 105, 14);
-		panelSNegAgreeFields.add(lblServiceNegotiation);
-		
-		txtServiceNegotiation = new JTextField();
-		txtServiceNegotiation.setBounds(125, 8, 157, 20);
-		panelSNegAgreeFields.add(txtServiceNegotiation);
-		txtServiceNegotiation.setColumns(10);
-		
-		JLabel lblServiceAgreement = new JLabel("Service Agreement");
-		lblServiceAgreement.setBounds(308, 11, 105, 14);
-		panelSNegAgreeFields.add(lblServiceAgreement);
-		
-		txtServiceAgreement = new JTextField();
-		txtServiceAgreement.setBounds(412, 8, 157, 20);
-		panelSNegAgreeFields.add(txtServiceAgreement);
-		txtServiceAgreement.setColumns(10);
-		
-		JLabel lblHiredServiceProvider = new JLabel("Hired Service Provider");
-		lblHiredServiceProvider.setBounds(10, 53, 114, 14);
-		panelSNegAgreeFields.add(lblHiredServiceProvider);
-		
-		JLabel lblServiceCustomer = new JLabel("Service Customer");
-		lblServiceCustomer.setBounds(308, 53, 93, 14);
-		panelSNegAgreeFields.add(lblServiceCustomer);
-		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(125, 50, 157, 20);
-		panelSNegAgreeFields.add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setEditable(false);
-		textField_1.setBounds(412, 50, 157, 20);
-		panelSNegAgreeFields.add(textField_1);
-		textField_1.setColumns(10);
 		
 		panelHiredP_ServiceC_Subgroup = new JPanel();
 		panelHiredP_ServiceC_Subgroup.setBounds(550, 11, 621, 511);
@@ -2700,6 +2556,145 @@ public class JanBase {
 			}
 		});			
 		
+		panelSNegAgree_SOfferAgree_SNegotiation = new JPanel();
+		panelSNegAgree_SOfferAgree_SNegotiation.setBounds(550, 11, 621, 511);
+		frame.getContentPane().add(panelSNegAgree_SOfferAgree_SNegotiation);
+		panelSNegAgree_SOfferAgree_SNegotiation.setLayout(null);
+		
+		panel_yes_no = new JPanel();
+		panel_yes_no.setBounds(20, 11, 591, 62);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(panel_yes_no);
+		panel_yes_no.setLayout(null);
+		
+		rdbtnYes = new JRadioButton("Yes");
+		rdbtnYes.setBounds(244, 32, 43, 23);
+		panel_yes_no.add(rdbtnYes);
+		
+		rdbtnNo = new JRadioButton("No");
+		rdbtnNo.setBounds(301, 32, 39, 23);
+		panel_yes_no.add(rdbtnNo);
+		
+		JLabel lblVocDesejaModelar = new JLabel("Do you want to model any of the patterns below ?");
+		lblVocDesejaModelar.setBounds(181, 11, 274, 14);
+		panel_yes_no.add(lblVocDesejaModelar);
+		
+		JPanel panel_options = new JPanel();
+		panel_options.setBounds(20, 85, 591, 67);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(panel_options);
+		panel_options.setLayout(null);
+		
+		rdbtnSnegagree = new JRadioButton("SNegAgree");
+		rdbtnSnegagree.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnSnegagree.setBounds(95, 20, 118, 23);
+		panel_options.add(rdbtnSnegagree);
+		
+		rdbtnSofferagree = new JRadioButton("SOfferAgree");
+		rdbtnSofferagree.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnSofferagree.setBounds(232, 20, 154, 23);
+		panel_options.add(rdbtnSofferagree);
+		
+		rdbtnSnegotiation = new JRadioButton("SNegotiation");
+		rdbtnSnegotiation.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnSnegotiation.setBounds(405, 20, 146, 23);
+		panel_options.add(rdbtnSnegotiation);
+		
+		imgPattern.setBounds(119, 171, 416, 224);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(imgPattern);
+		
+		panelSOfferAgreeFields.setBounds(20, 406, 591, 94);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSOfferAgreeFields);
+		panelSOfferAgreeFields.setLayout(null);
+		panelSOfferAgreeFields.setName("panelSOfferAgreeFields");
+		panelSOfferAgreeFields.setVisible(false);
+		
+		JLabel lblServiceAgreement_1 = new JLabel("Service Agreement");
+		lblServiceAgreement_1.setBounds(90, 11, 109, 14);
+		panelSOfferAgreeFields.add(lblServiceAgreement_1);
+		
+		textServiceAgreement_1 = new JTextField();
+		textServiceAgreement_1.setBounds(236, 8, 278, 20);
+		panelSOfferAgreeFields.add(textServiceAgreement_1);
+		textServiceAgreement_1.setColumns(10);
+		
+		JLabel lblHiredServiceProvider_1 = new JLabel("Hired Service Provider");
+		lblHiredServiceProvider_1.setBounds(90, 36, 139, 14);
+		panelSOfferAgreeFields.add(lblHiredServiceProvider_1);
+		
+		textHiredServiceProvider_1 = new JTextField();
+		textHiredServiceProvider_1.setEditable(false);
+		textHiredServiceProvider_1.setBounds(236, 33, 278, 20);
+		panelSOfferAgreeFields.add(textHiredServiceProvider_1);
+		textHiredServiceProvider_1.setColumns(10);
+		
+		JLabel lblServiceCustomer_1 = new JLabel("Service Customer");
+		lblServiceCustomer_1.setBounds(90, 61, 139, 14);
+		panelSOfferAgreeFields.add(lblServiceCustomer_1);
+		
+		txtServiceCustomer_1 = new JTextField();
+		txtServiceCustomer_1.setEditable(false);
+		txtServiceCustomer_1.setBounds(236, 58, 278, 20);
+		panelSOfferAgreeFields.add(txtServiceCustomer_1);
+		txtServiceCustomer_1.setColumns(10);
+		
+		panelSNegotiationFields.setBounds(20, 406, 591, 94);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSNegotiationFields);
+		panelSNegotiationFields.setLayout(null);
+		panelSNegotiationFields.setName("panelSNegotiationFields");
+		panelSNegotiationFields.setVisible(false);
+		
+		JLabel lblServiceNegotiation_1 = new JLabel("Service Negotiation");
+		lblServiceNegotiation_1.setBounds(147, 38, 117, 14);
+		panelSNegotiationFields.add(lblServiceNegotiation_1);
+		
+		textServiceNegotiation_1 = new JTextField();
+		textServiceNegotiation_1.setBounds(276, 35, 230, 20);
+		panelSNegotiationFields.add(textServiceNegotiation_1);
+		textServiceNegotiation_1.setColumns(10);
+		
+		panelSNegAgreeFields.setBounds(20, 406, 591, 94);
+		panelSNegAgree_SOfferAgree_SNegotiation.add(panelSNegAgreeFields);
+		panelSNegAgreeFields.setLayout(null);
+		panelSNegAgreeFields.setName("panelSNegAgreeFields");
+		panelSNegAgreeFields.setVisible(false);
+		
+		JLabel lblServiceNegotiation = new JLabel("Service Negotiation");
+		lblServiceNegotiation.setBounds(10, 11, 105, 14);
+		panelSNegAgreeFields.add(lblServiceNegotiation);
+		
+		txtServiceNegotiation = new JTextField();
+		txtServiceNegotiation.setBounds(125, 8, 157, 20);
+		panelSNegAgreeFields.add(txtServiceNegotiation);
+		txtServiceNegotiation.setColumns(10);
+		
+		JLabel lblServiceAgreement = new JLabel("Service Agreement");
+		lblServiceAgreement.setBounds(308, 11, 105, 14);
+		panelSNegAgreeFields.add(lblServiceAgreement);
+		
+		txtServiceAgreement = new JTextField();
+		txtServiceAgreement.setBounds(412, 8, 157, 20);
+		panelSNegAgreeFields.add(txtServiceAgreement);
+		txtServiceAgreement.setColumns(10);
+		
+		JLabel lblHiredServiceProvider = new JLabel("Hired Service Provider");
+		lblHiredServiceProvider.setBounds(10, 53, 114, 14);
+		panelSNegAgreeFields.add(lblHiredServiceProvider);
+		
+		JLabel lblServiceCustomer = new JLabel("Service Customer");
+		lblServiceCustomer.setBounds(308, 53, 93, 14);
+		panelSNegAgreeFields.add(lblServiceCustomer);
+		
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.setBounds(125, 50, 157, 20);
+		panelSNegAgreeFields.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setEditable(false);
+		textField_1.setBounds(412, 50, 157, 20);
+		panelSNegAgreeFields.add(textField_1);
+		textField_1.setColumns(10);
+		
 		
 		//Register a listener for the radio buttons SNegAgree Fields, SOfferAgree Fields and SNegotiation Fields
 		rdbtnSnegagree.addActionListener(new ActionListener() {
@@ -2750,6 +2745,18 @@ public class JanBase {
 			}
 		});
 		
+
+		//Group the radio buttons Provider.
+		rdYesNoGroup = new ButtonGroup();
+		
+		//Group the radio buttons SNegAgreeSOfferSNegotiation.
+		rdSNegAgreeSOfferAgreeSNegotiationGroup = new ButtonGroup();
+		
+		rdYesNoGroup.add(rdbtnYes);
+		rdYesNoGroup.add(rdbtnNo);
+		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSnegagree); 
+		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSnegotiation); 
+		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSofferagree); 
 		
 //**********************************************************************************************************************************
 		//SAgreement
@@ -3002,6 +3009,7 @@ public class JanBase {
 		imagemHPActions.setVisible(true);
 		HPActions_panelImg.add(imagemHPActions);
 		panelHPActionsInterno.add(HPActions_panelImg);
+		iconHPActionMotivation = new  ImageIcon(getClass().getResource("/resource/HPActionMotivation.png"));
 		
 		
 //**********************************************************************************************************************************
@@ -3018,33 +3026,46 @@ public class JanBase {
 		panelHPActionMotivation.add(panelHPActionMotivationInterno);
 		panelHPActionMotivationInterno.setLayout(null);
 		
-		JLabel HPActionMotivation_Label_Class = new JLabel("Class");
-		HPActionMotivation_Label_Class.setBounds(143, 327, 68, 14);
+		HiredProviderAction = new JTextField();
+		HiredProviderAction.setEditable(false);
+		HiredProviderAction.setColumns(10);
+		HiredProviderAction.setBounds(72, 417, 171, 20);
+		panelHPActionMotivationInterno.add(HiredProviderAction);
+		
+		HiredProviderCommitmentMode = new JTextField();
+		HiredProviderCommitmentMode.setEditable(false);
+		HiredProviderCommitmentMode.setColumns(10);
+		HiredProviderCommitmentMode.setBounds(396, 415, 171, 20);
+		panelHPActionMotivationInterno.add(HiredProviderCommitmentMode);
+		
+		label_3 = new JLabel("motivated by ->");
+		label_3.setHorizontalAlignment(SwingConstants.CENTER);
+		label_3.setBounds(258, 419, 110, 14);
+		panelHPActionMotivationInterno.add(label_3);
+		
+		rdbtnYes_1 = new JRadioButton("Yes");
+		rdbtnYes_1.setBounds(266, 345, 43, 23);
+		panelHPActionMotivationInterno.add(rdbtnYes_1);
+		
+		rdbtnNo_1 = new JRadioButton("No");
+		rdbtnNo_1.setBounds(325, 345, 43, 23);
+		panelHPActionMotivationInterno.add(rdbtnNo_1);
+		
+		JLabel HPActionMotivation_Label_Class = new JLabel("Do you want to use HPActionMotivation?");
+		HPActionMotivation_Label_Class.setBounds(220, 324, 224, 14);
 		panelHPActionMotivationInterno.add(HPActionMotivation_Label_Class);
 		
-		JLabel HPActionMotivation_Label_Name = new JLabel("Name");
-		HPActionMotivation_Label_Name.setBounds(328, 327, 68, 14);
-		panelHPActionMotivationInterno.add(HPActionMotivation_Label_Name);
-		
-		HPActionMotivation_txt = new JTextField();
-		HPActionMotivation_txt.setBounds(328, 352, 166, 20);
-		panelHPActionMotivationInterno.add(HPActionMotivation_txt);
-		HPActionMotivation_txt.setColumns(10);
-		
-		JLabel HPActionMotivation_label = new JLabel("HPActionMotivation");
-		HPActionMotivation_label.setBounds(143, 352, 167, 14);
-		panelHPActionMotivationInterno.add(HPActionMotivation_label);
-				
 		JPanel HPActionMotivation_panelImg = new JPanel();
 		HPActionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		HPActionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconHPActionMotivation = new  ImageIcon(getClass().getResource("/resource/HPActionMotivation.png"));
 		imagemHPActionMotivation = new JLabel(iconHPActionMotivation);
 		imagemHPActionMotivation.setBounds(10, 27, 581, 275);
 		imagemHPActionMotivation.setSize(70, 96); // 70 96
 		imagemHPActionMotivation.setVisible(true);
 		HPActionMotivation_panelImg.add(imagemHPActionMotivation);
 		panelHPActionMotivationInterno.add(HPActionMotivation_panelImg);
+				
+		
 		
 //**********************************************************************************************************************************
 		//SCActions
@@ -3087,6 +3108,7 @@ public class JanBase {
 		imagemSCActions.setVisible(true);
 		SCActions_panelImg.add(imagemSCActions);
 		panelSCActionsInterno.add(SCActions_panelImg);
+		iconSCActionMotivation = new  ImageIcon(getClass().getResource("/resource/SCActionMotivation.png"));
 		
 //**********************************************************************************************************************************
 		//SCActionMotivation
@@ -3102,33 +3124,44 @@ public class JanBase {
 		panelSCActionMotivation.add(panelSCActionMotivationInterno);
 		panelSCActionMotivationInterno.setLayout(null);
 		
-		JLabel SCActionMotivation_Label_Class = new JLabel("Class");
-		SCActionMotivation_Label_Class.setBounds(143, 327, 68, 14);
+		JLabel SCActionMotivation_Label_Class = new JLabel("Do you want to use SCActionMotivation?");
+		SCActionMotivation_Label_Class.setBounds(220, 324, 224, 14);
 		panelSCActionMotivationInterno.add(SCActionMotivation_Label_Class);
 		
-		JLabel SCActionMotivation_Label_Name = new JLabel("Name");
-		SCActionMotivation_Label_Name.setBounds(328, 327, 68, 14);
-		panelSCActionMotivationInterno.add(SCActionMotivation_Label_Name);
-		
-		SCActionMotivation_txt = new JTextField();
-		SCActionMotivation_txt.setBounds(328, 352, 166, 20);
-		panelSCActionMotivationInterno.add(SCActionMotivation_txt);
-		SCActionMotivation_txt.setColumns(10);
-		
-		JLabel SCActionMotivation_label = new JLabel("SCActionMotivation");
-		SCActionMotivation_label.setBounds(143, 352, 167, 14);
-		panelSCActionMotivationInterno.add(SCActionMotivation_label);
-				
 		JPanel SCActionMotivation_panelImg = new JPanel();
 		SCActionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		SCActionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconSCActionMotivation = new  ImageIcon(getClass().getResource("/resource/SCActionMotivation.png"));
 		imagemSCActionMotivation = new JLabel(iconSCActionMotivation);
 		imagemSCActionMotivation.setBounds(10, 27, 581, 275);
 		imagemSCActionMotivation.setSize(70, 96); // 70 96
 		imagemSCActionMotivation.setVisible(true);
 		SCActionMotivation_panelImg.add(imagemSCActionMotivation);
 		panelSCActionMotivationInterno.add(SCActionMotivation_panelImg);
+		
+		rdbtnYes_2 = new JRadioButton("Yes");
+		rdbtnYes_2.setBounds(266, 345, 43, 23);
+		panelSCActionMotivationInterno.add(rdbtnYes_2);
+		
+		rdbtnNo_2 = new JRadioButton("No");
+		rdbtnNo_2.setBounds(325, 345, 43, 23);
+		panelSCActionMotivationInterno.add(rdbtnNo_2);
+		
+		ServiceCustomerCommitmentMode = new JTextField();
+		ServiceCustomerCommitmentMode.setBounds(396, 415, 171, 20);
+		panelSCActionMotivationInterno.add(ServiceCustomerCommitmentMode);
+		ServiceCustomerCommitmentMode.setEditable(false);
+		ServiceCustomerCommitmentMode.setColumns(10);
+		
+		CustomerAction = new JTextField();
+		CustomerAction.setBounds(72, 417, 171, 20);
+		panelSCActionMotivationInterno.add(CustomerAction);
+		CustomerAction.setEditable(false);
+		CustomerAction.setColumns(10);
+		
+		label_2 = new JLabel("motivated by ->");
+		label_2.setBounds(258, 419, 110, 14);
+		panelSCActionMotivationInterno.add(label_2);
+		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		
 //**********************************************************************************************************************************
@@ -3172,6 +3205,7 @@ public class JanBase {
 		imagemInteractions.setVisible(true);
 		Interactions_panelImg.add(imagemInteractions);
 		panelInteractionsInterno.add(Interactions_panelImg);
+		iconInteractionMotivation = new  ImageIcon(getClass().getResource("/resource/InteractionMotivation.png"));
 		
 //**********************************************************************************************************************************
 		//InteractionMotivation
@@ -3187,33 +3221,69 @@ public class JanBase {
 		panelInteractionMotivation.add(panelInteractionMotivationInterno);
 		panelInteractionMotivationInterno.setLayout(null);
 		
-		JLabel InteractionMotivation_Label_Class = new JLabel("Class");
-		InteractionMotivation_Label_Class.setBounds(143, 327, 68, 14);
+		JLabel InteractionMotivation_Label_Class = new JLabel("Do you want to use InteractionMotivation?");
+		InteractionMotivation_Label_Class.setBounds(220, 324, 224, 14);
 		panelInteractionMotivationInterno.add(InteractionMotivation_Label_Class);
 		
-		JLabel InteractionMotivation_Label_Name = new JLabel("Name");
-		InteractionMotivation_Label_Name.setBounds(328, 327, 68, 14);
-		panelInteractionMotivationInterno.add(InteractionMotivation_Label_Name);
-		
-		InteractionMotivation_txt = new JTextField();
-		InteractionMotivation_txt.setBounds(328, 352, 166, 20);
-		panelInteractionMotivationInterno.add(InteractionMotivation_txt);
-		InteractionMotivation_txt.setColumns(10);
-		
-		JLabel InteractionMotivation_label = new JLabel("Interaction Motivation");
-		InteractionMotivation_label.setBounds(143, 352, 167, 14);
-		panelInteractionMotivationInterno.add(InteractionMotivation_label);
-				
 		JPanel InteractionMotivation_panelImg = new JPanel();
 		InteractionMotivation_panelImg.setBackground(Color.LIGHT_GRAY);
 		InteractionMotivation_panelImg.setBounds(10, 27, 581, 275);
-		iconInteractionMotivation = new  ImageIcon(getClass().getResource("/resource/InteractionMotivation.png"));
 		imagemInteractionMotivation = new JLabel(iconInteractionMotivation);
 		imagemInteractionMotivation.setBounds(10, 27, 581, 275);
 		imagemInteractionMotivation.setSize(70, 96); // 70 96
 		imagemInteractionMotivation.setVisible(true);
 		InteractionMotivation_panelImg.add(imagemInteractionMotivation);
 		panelInteractionMotivationInterno.add(InteractionMotivation_panelImg);
+		
+		rdbtnYes_3 = new JRadioButton("Yes");
+		rdbtnYes_3.setBounds(266, 345, 43, 23);
+		panelInteractionMotivationInterno.add(rdbtnYes_3);
+		
+		rdbtnNo_3 = new JRadioButton("No");
+		rdbtnNo_3.setBounds(333, 345, 43, 23);
+		panelInteractionMotivationInterno.add(rdbtnNo_3);
+		
+		HiredProviderCustomerInteraction = new JTextField();
+		HiredProviderCustomerInteraction.setBounds(66, 416, 171, 20);
+		panelInteractionMotivationInterno.add(HiredProviderCustomerInteraction);
+		HiredProviderCustomerInteraction.setEditable(false);
+		HiredProviderCustomerInteraction.setColumns(10);
+		
+		HiredProviderCommitment = new JTextField();
+		HiredProviderCommitment.setBounds(404, 403, 171, 20);
+		panelInteractionMotivationInterno.add(HiredProviderCommitment);
+		HiredProviderCommitment.setEditable(false);
+		HiredProviderCommitment.setColumns(10);
+		
+		ServiceCustomerCommitment = new JTextField();
+		ServiceCustomerCommitment.setEditable(false);
+		ServiceCustomerCommitment.setColumns(10);
+		ServiceCustomerCommitment.setBounds(404, 434, 171, 20);
+		panelInteractionMotivationInterno.add(ServiceCustomerCommitment);
+		
+		JLabel lblMotivatedBy = new JLabel("motivated by ->");
+		lblMotivatedBy.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMotivatedBy.setBounds(266, 419, 110, 14);
+		panelInteractionMotivationInterno.add(lblMotivatedBy);
+		
+		
+		//Group the radio buttons HPActionMotivation.
+		rdHPActionMotivationGroup = new ButtonGroup();
+		
+		//Group the radio buttons SCActionMotivation.
+		rdSCActionMotivationGroup = new ButtonGroup();
+		
+		//Group the radio buttons InteractionMotivation.
+		rdInteractionMotivationGroup = new ButtonGroup();
+		
+		rdHPActionMotivationGroup.add(rdbtnYes_1);
+		rdHPActionMotivationGroup.add(rdbtnNo_1);
+		
+		rdSCActionMotivationGroup.add(rdbtnYes_2);
+		rdSCActionMotivationGroup.add(rdbtnNo_2);
+		
+		rdInteractionMotivationGroup.add(rdbtnYes_3);
+		rdInteractionMotivationGroup.add(rdbtnNo_3);
 
 //**********************************************************************************************************************************
 		//SODescription	
@@ -3480,10 +3550,7 @@ public class JanBase {
 		rdProviderGroup.add(rdbtnO_OU_Provider); 
 		rdProviderGroup.add(rdbtnP_O_Provider);
 		
-		//Group the radio buttons Provider.
-		rdYesNoGroup = new ButtonGroup();
-		rdYesNoGroup.add(rdbtnYes);
-		rdYesNoGroup.add(rdbtnNo);
+
 		
 		//Group the radio buttons Hired Provider.
 		rdHiredProviderGroup = new ButtonGroup();
@@ -3512,12 +3579,7 @@ public class JanBase {
 		rdServiceCustomerGroup.add(rdbtnOU_Customer); 
 		rdServiceCustomerGroup.add(rdbtnP_O_OU_Customer);
 		rdServiceCustomerGroup.add(rdbtnO_OU_Customer);	
-		
-		//Group the radio buttons SNegAgreeSOfferSNegotiation.
-		rdSNegAgreeSOfferAgreeSNegotiationGroup = new ButtonGroup();
-		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSnegagree); 
-		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSnegotiation); 
-		rdSNegAgreeSOfferAgreeSNegotiationGroup.add(rdbtnSofferagree); 
+	
 		
 		imgPatternProvider = new JPanel();
 		imgPatternProvider.setBackground(Color.GRAY);
