@@ -4532,6 +4532,9 @@ public class JanBase {
 		if(painelSelecionado == 10){
 			panelHPActionMotivation.setVisible(true);
 			imagemSteps.setIcon(new ImageIcon(JanBase.class.getResource("/resource/SDelivery_Steps_3.png")));
+			
+			this.HiredProviderAction.setText(this.HPActions_txt.getText());
+			this.HiredProviderCommitmentMode.setText(this.HPCommitments_txt.getText());
 		}
 		if(painelSelecionado == 11){
 			panelSCActions.setVisible(true);
@@ -4540,6 +4543,9 @@ public class JanBase {
 		if(painelSelecionado == 12){
 			panelSCActionMotivation.setVisible(true);
 			imagemSteps.setIcon(new ImageIcon(JanBase.class.getResource("/resource/SDelivery_Steps_5.png")));
+			
+			this.CustomerAction.setText(this.SCActions_txt.getText());
+			this.ServiceCustomerCommitmentMode.setText(this.SCCommitments_txt.getText());
 		}
 		if(painelSelecionado == 13){
 			panelInteractions.setVisible(true);
@@ -4552,6 +4558,10 @@ public class JanBase {
 			imagemSteps.setIcon(new ImageIcon(JanBase.class.getResource("/resource/SDelivery_Steps_7.png")));
 			btnNext.setEnabled(false);
 			btnCreateConcepts.setEnabled(true);
+			
+			this.HiredProviderCustomerInteraction.setText(this.Interactions_txt.getText());
+			this.HiredProviderCommitment.setText(this.HPCommitments_txt.getText());
+			this.ServiceCustomerCommitment.setText(this.SCCommitments_txt.getText());
 		}
 	}	
 	
