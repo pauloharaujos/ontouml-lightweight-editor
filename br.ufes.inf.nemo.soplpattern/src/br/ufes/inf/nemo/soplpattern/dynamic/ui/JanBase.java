@@ -216,9 +216,9 @@ public class JanBase {
 	ButtonGroup rdHiredProviderGroup;
 	ButtonGroup rdSNegAgreeSOfferAgreeSNegotiationGroup;
 	ButtonGroup rdYesNoGroup;
-	ButtonGroup rdHPActionMotivationGroup;
-	ButtonGroup rdSCActionMotivationGroup;
-	ButtonGroup rdInteractionMotivationGroup;
+	public ButtonGroup rdHPActionMotivationGroup;
+	public ButtonGroup rdSCActionMotivationGroup;
+	public ButtonGroup rdInteractionMotivationGroup;
 	
 	
 	 //Provider - Variant Patterns
@@ -391,12 +391,12 @@ public class JanBase {
 	JButton btnBack;
 	JButton btnNext;
 	JButton btnCreateConcepts;
-	private JRadioButton rdbtnYes_1;
-	private JRadioButton rdbtnNo_1;
-	private JRadioButton rdbtnYes_2;
-	private JRadioButton rdbtnNo_2;
-	private JRadioButton rdbtnYes_3;
-	private JRadioButton rdbtnNo_3;
+	public JRadioButton rdbtnYes_1;
+	public JRadioButton rdbtnNo_1;
+	public JRadioButton rdbtnYes_2;
+	public JRadioButton rdbtnNo_2;
+	public JRadioButton rdbtnYes_3;
+	public JRadioButton rdbtnNo_3;
 	private JTextField HiredProviderCustomerInteraction;
 	private JTextField HiredProviderCommitment;
 	private JTextField ServiceCustomerCommitment;
@@ -4635,51 +4635,50 @@ public class JanBase {
 		int customerSelected = getRadioCustomerSubgroupSelected();
 
 		if(providerSelected == 1) { //rdbtnP_Provider
-			System.out.println(this.txtServiceProvider_P_Provider.getText());
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_P_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_P_Provider.getText() + " contradada");
 		}else if(providerSelected == 2) { //rdbtnO_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_O_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_O_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_O_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_O_Provider.getText() + " contradada");
 		}else if(providerSelected == 3) { //rdbtnOU_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_OU_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_OU_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_OU_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_OU_Provider.getText() + " contradada");
 		}else if(providerSelected == 4) { //rdbtnP_O_OU_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_O_OU_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_P_O_OU_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_O_OU_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_P_O_OU_Provider.getText() + " contradada");
 		}else if(providerSelected == 5) { //rdbtnO_OU_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_O_OU_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_O_OU_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_O_OU_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_O_OU_Provider.getText() + " contradada");
 		}else if(providerSelected == 6) { //rdbtnP_O_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_O_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_P_O_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_O_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_P_O_Provider.getText() + " contradada");
 		}else if(providerSelected == 7) { //rdbtnP_OU_Provider
-			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_OU_Provider.getText());
-			this.textField.setText(this.txtServiceProvider_P_OU_Provider.getText());
+			this.textHiredServiceProvider_1.setText(this.txtServiceProvider_P_OU_Provider.getText() + " contradada");
+			this.textField.setText(this.txtServiceProvider_P_OU_Provider.getText() + " contradada");
 		}
 		
 		
 		if(customerSelected == 1) { //rdbtnP_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_P_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_P_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 2) { //rdbtnO_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_O_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_O_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_O_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_O_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 3) { //rdbtnOU_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_OU_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_OU_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_OU_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_OU_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 4) { //rdbtnP_O_OU_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_O_OU_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_P_O_OU_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_O_OU_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_P_O_OU_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 5) { //rdbtnO_OU_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_O_OU_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_O_OU_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_O_OU_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_O_OU_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 6) { //rdbtnP_O_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_O_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomer_P_O_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomer_P_O_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomer_P_O_TCustomer.getText() + " que contratou");
 		}else if(customerSelected == 7) { //rdbtnP_OU_TCustomer
-			this.txtServiceCustomer_1.setText(this.txtTargetCustomerTC_P_OU_TCustomer.getText());
-			this.textField_1.setText(this.txtTargetCustomerTC_P_OU_TCustomer.getText());
+			this.txtServiceCustomer_1.setText(this.txtTargetCustomerTC_P_OU_TCustomer.getText() + " que contratou");
+			this.textField_1.setText(this.txtTargetCustomerTC_P_OU_TCustomer.getText() + " que contratou");
 		}	
 		
 	}
