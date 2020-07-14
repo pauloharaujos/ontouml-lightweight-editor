@@ -415,7 +415,7 @@ public class EntryPoint extends SOPLPattern{
 		if(!saDescription.equals("")) {			
 			categorySADescription = this.createClassifier(saDescription, "Category", 450, 350);
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "", categorySADescription, relatorAgreement, 0,-1,1,-1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "describes", categorySADescription, relatorAgreement, 0,-1,1,-1).getAdded().get(0);
 			fix.includeAdded(association);	
 		}	
 		
@@ -427,7 +427,7 @@ public class EntryPoint extends SOPLPattern{
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.COMPONENTOF, "", relatorAgreement, modeServiceCustomerCommit, 1,1,0,-1).getAdded().get(0);
 			fix.includeAdded(association);	
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeServiceCustomerCommit, roleHiredServiceProvider, 0,-1,1,-1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeServiceCustomerCommit, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 			
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "inheres in", modeServiceCustomerCommit, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
@@ -444,7 +444,7 @@ public class EntryPoint extends SOPLPattern{
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "inheres in", modeHPCommitments, roleHiredServiceProvider, 1,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeHPCommitments, roleServiceCustomer, 1,-1,1,-1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeHPCommitments, roleServiceCustomer, 1,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 		}	
 		
@@ -550,7 +550,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveA  = this.createClassifier(person, "kind", 0, 50);
 			
 			//Create Hired Service Provider
-			String hiredserviceProvider = janBase.getTxtServiceProvider_P_HProvider().getText();
+			String hiredserviceProvider = janBase.getTxtServiceProvider_P_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(hiredserviceProvider, "RoleMixin", 0, 150);	
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
@@ -560,7 +560,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveA  = this.createClassifier(organization, "kind", 200, 150);
 			
 			//Create Hired Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_O_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_O_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "Role", 200, 300);	
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
@@ -570,7 +570,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveA  = this.createClassifier(orgUnit, "kind", 200, 150);
 			
 			//Create Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_OU_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_OU_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "Role", 200, 300);
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleHiredServiceProvider, collectiveA));
@@ -585,7 +585,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveC  = this.createClassifier(orgUnitProvider, "role", 200, 50);
 			
 			//Create Hired Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_P_O_OU_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_P_O_OU_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
 			
 			//Create Organization Hired Provider
@@ -601,7 +601,7 @@ public class EntryPoint extends SOPLPattern{
 			roleOrgUnitProvider  = this.createClassifier(orgUnitProvider, "role", 150, 450);
 			
 			//Create Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_O_OU_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_O_OU_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
 			
 			//Create Organization Hired Provider
@@ -616,7 +616,7 @@ public class EntryPoint extends SOPLPattern{
 			rolePersonProvider  = this.createClassifier(personProvider, "role", 150, 450);
 			
 			//Create Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_P_O_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_P_O_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
 			
 			//Create Organization Hired Provider
@@ -636,7 +636,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveC  = this.createClassifier(orgUnitProvider, "role", 200, 50);
 			
 			//Create Service Provider
-			String serviceProvider = janBase.getTxtServiceProvider_P_OU_HProvider().getText();
+			String serviceProvider = janBase.getTxtServiceProvider_P_OU_HProvider().getText() + "contratada";
 			roleHiredServiceProvider = this.createClassifier(serviceProvider, "RoleMixin", 200, 300);
 			
 			fix.addAll(outcomeFixer.createGeneralization(collectiveC, roleHiredServiceProvider ));
@@ -651,7 +651,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveB  = this.createClassifier(person, "kind",900, 00);
 			
 			//Create Target Customer
-			String customer = janBase.getTxtTargetCustomer_P_Customer().getText();
+			String customer = janBase.getTxtTargetCustomer_P_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(customer, "RoleMixin", 900, 100);
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));
 		}else if(patternServiceCustomerSelected == 2){// Pattern O-TCustomer
@@ -660,7 +660,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveB  = this.createClassifier(organization, "kind",600, 150);
 			
 			//Create Customer
-			String targetCustomer = janBase.getTxtTargetCustomer_O_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomer_O_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "Role", 600, 300);
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));	
@@ -670,7 +670,7 @@ public class EntryPoint extends SOPLPattern{
 			collectiveB  = this.createClassifier(orgUnit, "kind",600, 150);
 			
 			//Create Customer
-			String targetCustomer = janBase.getTxtTargetCustomer_OU_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomer_OU_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "Role", 600, 300);
 			
 			fix.addAll(outcomeFixer.createGeneralization(roleServiceCustomer, collectiveB));	
@@ -686,7 +686,7 @@ public class EntryPoint extends SOPLPattern{
 			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
 			
 			//Create  Customer
-			String targetCustomer = janBase.getTxtTargetCustomer_P_O_OU_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomer_P_O_OU_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
 			
 			//Create Organization  Customer
@@ -703,7 +703,7 @@ public class EntryPoint extends SOPLPattern{
 			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
 			
 			//Create  Customer
-			String targetCustomer = janBase.getTxtTargetCustomer_O_OU_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomer_O_OU_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
 			
 			//Create Organization  Customer
@@ -718,7 +718,7 @@ public class EntryPoint extends SOPLPattern{
 			rolePersonTC  = this.createClassifier(personTC, "role", 550, 450);
 			
 			//Create  Customer
-			String targetCustomer = janBase.getTxtTargetCustomer_P_O_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomer_P_O_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
 			
 			//Create Organization Customer
@@ -738,7 +738,7 @@ public class EntryPoint extends SOPLPattern{
 			roleOrgUnitTC  = this.createClassifier(orgUnitTC, "role", 550, 450);
 			
 			//Create Customer
-			String targetCustomer = janBase.getTxtTargetCustomerTC_P_OU_Customer().getText();
+			String targetCustomer = janBase.getTxtTargetCustomerTC_P_OU_Customer().getText() + "que contratou";
 			roleServiceCustomer = this.createClassifier(targetCustomer, "RoleMixin", 600, 300);
 			
 			fix.addAll(outcomeFixer.createGeneralization(rolePersonTC, roleServiceCustomer ));
@@ -773,7 +773,7 @@ public class EntryPoint extends SOPLPattern{
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.COMPONENTOF, "", relatorAgreement, modeServiceCustomerCommit, 1,1,0,-1).getAdded().get(0);
 			fix.includeAdded(association);	
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeServiceCustomerCommit, roleHiredServiceProvider, 0,-1,1,-1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeServiceCustomerCommit, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 			
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "inheres in", modeServiceCustomerCommit, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
@@ -790,7 +790,7 @@ public class EntryPoint extends SOPLPattern{
 			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "inheres in", modeHPCommitments, roleHiredServiceProvider, 1,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 			
-			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeHPCommitments, roleServiceCustomer, 1,-1,1,-1).getAdded().get(0);
+			association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "externally dependent on", modeHPCommitments, roleServiceCustomer, 1,-1,1,1).getAdded().get(0);
 			fix.includeAdded(association);
 		}	
 		
@@ -826,7 +826,7 @@ public class EntryPoint extends SOPLPattern{
 		String SCAction = janBase.getSCActions_txt().getText();		
 		eventSCAction = this.createClassifier(SCAction , "Relator",  500, 0);
 		
-		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCAction, roleHiredServiceProvider, 0,-1,1,1).getAdded().get(0);
+		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.ASSOCIATION, "performed by", eventSCAction, roleServiceCustomer, 0,-1,1,1).getAdded().get(0);
 		fix.includeAdded(association);
 		association = (Association)outcomeFixer.createAssociationBetweenUsingMultiplicity(RelationStereotype.COMPONENTOF, "", eventSDelivery, eventSCAction, 1,1,0,-1).getAdded().get(0);
 		fix.includeAdded(association);	
