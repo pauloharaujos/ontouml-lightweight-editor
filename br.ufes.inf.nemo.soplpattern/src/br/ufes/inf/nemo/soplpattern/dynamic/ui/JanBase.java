@@ -1882,7 +1882,7 @@ public class JanBase {
 		
 		
 		JLabel lblServiceOffering = new JLabel("Service Offering");
-		lblServiceOffering.setBounds(143, 352, 78, 14);
+		lblServiceOffering.setBounds(143, 352, 145, 14);
 		panelSOfferingInterno.add(lblServiceOffering);
 		
 		panelHiredP_ServiceC_Subgroup = new JPanel();
@@ -2567,11 +2567,11 @@ public class JanBase {
 		panel_yes_no.setLayout(null);
 		
 		rdbtnYes = new JRadioButton("Yes");
-		rdbtnYes.setBounds(244, 32, 43, 23);
+		rdbtnYes.setBounds(244, 32, 60, 23);
 		panel_yes_no.add(rdbtnYes);
 		
 		rdbtnNo = new JRadioButton("No");
-		rdbtnNo.setBounds(301, 32, 39, 23);
+		rdbtnNo.setBounds(301, 32, 60, 23);
 		panel_yes_no.add(rdbtnNo);
 		
 		JLabel lblVocDesejaModelar = new JLabel("Do you want to model any of the patterns below ?");
@@ -2870,7 +2870,7 @@ public class JanBase {
 		SCCommitments_txt.setColumns(10);
 		
 		JLabel SCCommitments_label = new JLabel("SCCommitments");
-		SCCommitments_label.setBounds(143, 352, 78, 14);
+		SCCommitments_label.setBounds(143, 352, 90, 14);
 		panelSCCommitmentsInterno.add(SCCommitments_label);
 				
 		JPanel SCCommitments_panelImg = new JPanel();
@@ -2912,7 +2912,7 @@ public class JanBase {
 		HPCommitments_txt.setColumns(10);
 		
 		JLabel HPCommitments_label = new JLabel("HPCommitments");
-		HPCommitments_label.setBounds(143, 352, 78, 14);
+		HPCommitments_label.setBounds(143, 352, 90, 14);
 		panelHPCommitmentsInterno.add(HPCommitments_label);
 				
 		JPanel HPCommitments_panelImg = new JPanel();
@@ -3029,13 +3029,13 @@ public class JanBase {
 		HiredProviderAction = new JTextField();
 		HiredProviderAction.setEditable(false);
 		HiredProviderAction.setColumns(10);
-		HiredProviderAction.setBounds(72, 417, 171, 20);
+		HiredProviderAction.setBounds(72, 417, 190, 20);
 		panelHPActionMotivationInterno.add(HiredProviderAction);
 		
 		HiredProviderCommitmentMode = new JTextField();
 		HiredProviderCommitmentMode.setEditable(false);
 		HiredProviderCommitmentMode.setColumns(10);
-		HiredProviderCommitmentMode.setBounds(396, 415, 171, 20);
+		HiredProviderCommitmentMode.setBounds(396, 415, 190, 20);
 		panelHPActionMotivationInterno.add(HiredProviderCommitmentMode);
 		
 		label_3 = new JLabel("motivated by ->");
@@ -3044,11 +3044,11 @@ public class JanBase {
 		panelHPActionMotivationInterno.add(label_3);
 		
 		rdbtnYes_1 = new JRadioButton("Yes");
-		rdbtnYes_1.setBounds(266, 345, 43, 23);
+		rdbtnYes_1.setBounds(266, 345, 60, 23);
 		panelHPActionMotivationInterno.add(rdbtnYes_1);
 		
 		rdbtnNo_1 = new JRadioButton("No");
-		rdbtnNo_1.setBounds(325, 345, 43, 23);
+		rdbtnNo_1.setBounds(325, 345, 60, 23);
 		panelHPActionMotivationInterno.add(rdbtnNo_1);
 		
 		JLabel HPActionMotivation_Label_Class = new JLabel("Do you want to use HPActionMotivation?");
@@ -3139,21 +3139,21 @@ public class JanBase {
 		panelSCActionMotivationInterno.add(SCActionMotivation_panelImg);
 		
 		rdbtnYes_2 = new JRadioButton("Yes");
-		rdbtnYes_2.setBounds(266, 345, 43, 23);
+		rdbtnYes_2.setBounds(266, 345, 60, 23);
 		panelSCActionMotivationInterno.add(rdbtnYes_2);
 		
 		rdbtnNo_2 = new JRadioButton("No");
-		rdbtnNo_2.setBounds(325, 345, 43, 23);
+		rdbtnNo_2.setBounds(325, 345, 60, 23);
 		panelSCActionMotivationInterno.add(rdbtnNo_2);
 		
 		ServiceCustomerCommitmentMode = new JTextField();
-		ServiceCustomerCommitmentMode.setBounds(396, 415, 171, 20);
+		ServiceCustomerCommitmentMode.setBounds(396, 415, 190, 20);
 		panelSCActionMotivationInterno.add(ServiceCustomerCommitmentMode);
 		ServiceCustomerCommitmentMode.setEditable(false);
 		ServiceCustomerCommitmentMode.setColumns(10);
 		
 		CustomerAction = new JTextField();
-		CustomerAction.setBounds(72, 417, 171, 20);
+		CustomerAction.setBounds(72, 417, 190, 20);
 		panelSCActionMotivationInterno.add(CustomerAction);
 		CustomerAction.setEditable(false);
 		CustomerAction.setColumns(10);
@@ -3236,21 +3236,21 @@ public class JanBase {
 		panelInteractionMotivationInterno.add(InteractionMotivation_panelImg);
 		
 		rdbtnYes_3 = new JRadioButton("Yes");
-		rdbtnYes_3.setBounds(266, 345, 43, 23);
+		rdbtnYes_3.setBounds(266, 345, 60, 23);
 		panelInteractionMotivationInterno.add(rdbtnYes_3);
 		
 		rdbtnNo_3 = new JRadioButton("No");
-		rdbtnNo_3.setBounds(333, 345, 43, 23);
+		rdbtnNo_3.setBounds(333, 345, 60, 23);
 		panelInteractionMotivationInterno.add(rdbtnNo_3);
 		
 		HiredProviderCustomerInteraction = new JTextField();
-		HiredProviderCustomerInteraction.setBounds(66, 416, 171, 20);
+		HiredProviderCustomerInteraction.setBounds(66, 416, 190, 20);
 		panelInteractionMotivationInterno.add(HiredProviderCustomerInteraction);
 		HiredProviderCustomerInteraction.setEditable(false);
 		HiredProviderCustomerInteraction.setColumns(10);
 		
 		HiredProviderCommitment = new JTextField();
-		HiredProviderCommitment.setBounds(404, 403, 171, 20);
+		HiredProviderCommitment.setBounds(404, 403, 190, 20);
 		panelInteractionMotivationInterno.add(HiredProviderCommitment);
 		HiredProviderCommitment.setEditable(false);
 		HiredProviderCommitment.setColumns(10);
@@ -3258,7 +3258,7 @@ public class JanBase {
 		ServiceCustomerCommitment = new JTextField();
 		ServiceCustomerCommitment.setEditable(false);
 		ServiceCustomerCommitment.setColumns(10);
-		ServiceCustomerCommitment.setBounds(404, 434, 171, 20);
+		ServiceCustomerCommitment.setBounds(404, 434, 190, 20);
 		panelInteractionMotivationInterno.add(ServiceCustomerCommitment);
 		
 		JLabel lblMotivatedBy = new JLabel("motivated by ->");
